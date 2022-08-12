@@ -2,30 +2,33 @@ import React from 'react'
 import styled from 'styled-components';
 
 const LinkHeaderStyled = styled.a`
-    background: linear-gradient(to bottom, #3549ff, #3549ff) 50% calc(100% - 2px) / 25px 2px no-repeat;
-    color: #111;
-    font: normal 600 20px / 1.35 "Work Sans", Helvetica, Arial, Verdana, sans-serif;
-		margin: -1px;
-    margin-bottom: -2px !important;
-    padding: 1px 5px 5px 3px;
-    text-decoration: none !important;
-
-    -webkit-transition: all .35s ease-in-out;
-            transition: all .35s ease-in-out;
+    background: linear-gradient(to left, rgba(255,255,255,0)
+         50%, #000000 50%) 100% 98% / 220% 2px no-repeat, 
+         linear-gradient(to right, rgba(255,255,255,0) 50%, 
+         #000000 50%) 0% 0% / 220% 2px no-repeat;
+    color: #000000;
+    cursor: pointer !important;
+	padding: 5px 2px;
+    transition: all .35s ease-in-out;
 
     &:hover, :focus {
-        background-size: 100% 2px;
-
-    -webkit-transition: all .35s ease-in-out !important;
-            transition: all .35s ease-in-out !important;
+        background-position: 0 98%, 100% 0;
+        color: #000;
+        outline: none;
+        transition: all .35s ease-in-out;
     }
 `
 
-const LinkHeader = ({ textLink }) => {
+const LinkHeader = ({ textLink, link }) => {
     return ( 
         <>
-            <li className='mr-10 text-xl'>
-                <LinkHeaderStyled href="">{ textLink }</LinkHeaderStyled>
+            <li className='mr-10 text-xl font-bold '>
+                <LinkHeaderStyled 
+                    href={ link }
+                    target='_blank'
+                >
+                    { textLink }
+                </LinkHeaderStyled>
             </li>
             
         </>
