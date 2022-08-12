@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 const LinkHeaderStyled = styled.a`
     background: linear-gradient(to left, rgba(255,255,255,0)
-         50%, #000000 50%) 100% 98% / 220% 2px no-repeat, 
+         50%, #4BBAFA 50%) 100% 98% / 220% 2px no-repeat, 
          linear-gradient(to right, rgba(255,255,255,0) 50%, 
-         #000000 50%) 0% 0% / 220% 2px no-repeat;
+         #4BBAFA 50%) 0% 0% / 220% 2px no-repeat;
     color: #000000;
     cursor: pointer !important;
 	padding: 5px 2px;
