@@ -9,11 +9,12 @@ module.exports = {
     },
     extend: {
       colors: {
-        'Background-white': '#EDF4FA',
-        'Hover-gray': '#D5DCE0',
-        'Color-Text-H1': '#122C3B',
-        'Color-Text-H2': '#245A7A',
-        'Color-Text-H3': '#4BBAFA',
+        'Background': '#011326',
+        'Color-Text-H1': '#228DFF',
+        'Color-Text-H2': '#6DEDFF',
+        'Color-Text-H3': '#8150FF',
+        'Color-Text-H4': '#E6E7E9',
+        'Color-Text-H5': '#777A94',
       },
     },
   },

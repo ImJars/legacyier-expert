@@ -1,5 +1,6 @@
 import React from 'react'
 import LinkHeader from './components/LinkHeader';
+import HamburguerMenu from './HamburguerMenu';
 
 const Header = () => {
     return ( 
@@ -9,6 +10,7 @@ const Header = () => {
             >
                 <div className='grid content-center'>
                     <h1>Espacio en blanco</h1>
+                    <HamburguerMenu/>
                 </div>
                 <div className='grid content-center mr-10'>
                     <ol className='flex'>
