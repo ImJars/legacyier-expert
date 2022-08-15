@@ -66,7 +66,6 @@ const Container = styled.div`
             display: block;
             margin-top: 75px;
             margin-left: -30px;
-            font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
             font-size: 12px;
             color: #fff;
             text-transform: uppercase;
@@ -84,12 +83,14 @@ const Container = styled.div`
 
 const Scroll = () => {
     return ( 
+        <div className='flex justify-center'>
         <Container>
             <div className="chevron"></div>
             <div className="chevron"></div>
             <div className="chevron"></div>
-            <span className="text">Scroll down</span>
+            {/* <span className="text">Scroll down</span> */}
         </Container>
+        </div>
      );
 }
  
