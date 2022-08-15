@@ -1,22 +1,23 @@
 import React from 'react';
+import Scroll from './components/Scroll';
 
 const Home = () => {
     return ( 
         <>
         <div className='w-full bg-Background'>
             <div 
-                className='h-screen grid sm:grid-cols-1 content-center
+                className='h-screen grid sm:grid-cols-2 content-center
                             mx-10 sm:mx-16'
             >
                 <div>
                     <font className='flex'>
-                        <h2 className='text-white font-roboto font-bold text-4xl sm:text-6xl'>
+                        <h2 className='text-white font-roboto font-bold text-4xl sm:text-5xl'>
                             Hello, I'm &nbsp; 
                         </h2>
                         <h2
                         className='text-transparent bg-clip-text bg-gradient-to-r
                                  from-Color-Text-H3 via-Color-Text-H1 to-Color-Text-H2
-                                  font-roboto font-bold text-4xl sm:text-6xl'
+                                  font-roboto font-bold text-4xl sm:text-5xl'
                         >
                             Angel Ramirez
                         </h2>
@@ -31,8 +32,9 @@ const Home = () => {
                         </span>
                     </button>
                 </div>
-                <div>
-
+                <div className='flex justify-center'>
+                    <div className='bg-white w-56 h-56 rounded-2xl'/>
+                    <Scroll/>
                 </div>
             </div>                 
         </div>
