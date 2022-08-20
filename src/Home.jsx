@@ -1,5 +1,6 @@
 import React from 'react';
 import Scroll from './components/Scroll';
+import Img from './images/home.svg';
 
 const Home = () => {
     return ( 
@@ -8,23 +9,20 @@ const Home = () => {
             <div className='h-screen grid content-center'>
                 <div>
                     <div 
-                    className='grid sm:grid-cols-2 content-center
-                                mx-10 sm:mx-16'
+                    className='sm:flex items-center mx-10 sm:mx-16'
                     >
-                        <div>
-                            <font className='flex'>
-                                <h2 className='text-white font-roboto font-bold text-4xl sm:text-5xl'>
+                        <div className='sm:w-2/3'>
+                            <h1 className='flex text-white font-roboto font-bold text-3xl sm:text-5xl'>
                                     Hello, I'm &nbsp; 
-                                </h2>
-                                <h2
-                                className='text-transparent bg-clip-text bg-gradient-to-r
+                                <font
+                                    className='text-transparent bg-clip-text bg-gradient-to-r
                                         from-Color-Text-H3 via-Color-Text-H1 to-Color-Text-H2
-                                        font-roboto font-bold text-4xl sm:text-5xl'
+                                        font-roboto font-bold text-3xl sm:text-5xl'
                                 >
                                     Angel Ramirez
-                                </h2>
+                                </font>
 
-                            </font>
+                            </h1>
                                 <h2 className='text-Color-Text-H1 font-roboto font-light text-2xl sm:text-4xl'>
                                     I build things for the web.
                                 </h2>
@@ -35,7 +33,7 @@ const Home = () => {
                             </button>
                         </div>
                         <div className='flex justify-center'>
-                            <div className='bg-white w-56 h-56 rounded-2xl'/>
+                            <img className='h-96' src={Img} alt="" />
                         </div>
                     </div>
                 </div>
