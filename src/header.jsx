@@ -1,6 +1,6 @@
 import React from 'react'
 import LinkHeader from './components/LinkHeader';
-import HamburguerMenu from './HamburguerMenu';
+import HamburguerMenu from './components/HamburguerMenu';
 
 const Header = () => {
     return ( 
