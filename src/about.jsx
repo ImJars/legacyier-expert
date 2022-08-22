@@ -6,7 +6,7 @@ const About = () => {
             <div className='w-full flex justify-center'>
                 <div className="min-h-750 max-w-240 grid content-center mx-10 sm:mx-0">
                     <h1 
-                        className='text-center text-4xl font-bold text-gray-800 mb-10'
+                        className='text-center text-4xl font-roboto font-bold text-gray-800 mb-10'
                     >
                         About&nbsp; 
                         <font className="text-transparent bg-clip-text bg-gradient-to-r

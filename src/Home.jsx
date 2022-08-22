@@ -27,7 +27,7 @@ const Home = () => {
                             <h2 className='text-Color-Text-H1 font-roboto font-light text-2xl sm:text-4xl'>
                                 I build things for the web.
                             </h2>
-                            <h3 className='text-Color-Text-H4 pt-5'>
+                            <h3 className='text-Color-Text-H4 pt-5 font-roboto'>
                                 I'm a software developer specializing in creating exceptional 
                                 products and digital <br/> experiences. I am currently focused on 
                                 creating <font className='text-Color-Text-H3'>Web3</font> technology products.
