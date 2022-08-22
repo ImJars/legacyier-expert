@@ -14,7 +14,7 @@ const Home = () => {
                     >
                         <div className='sm:w-2/3'>
                             <h1 className='flex text-white font-roboto font-bold text-3xl sm:text-5xl'>
-                                    Hello, I'm &nbsp; 
+                                    Hello, I'm&nbsp; 
                                 <font
                                     className='text-transparent bg-clip-text bg-gradient-to-r
                                         from-Color-Text-H3 via-Color-Text-H1 to-Color-Text-H2
