@@ -16,6 +16,12 @@ module.exports = {
         'Color-Text-H4': '#E6E7E9',
         'Color-Text-H5': '#777A94',
       },
+      minHeight: {
+        750: '46.875rem', //750px
+      },
+      maxWidth: {
+        240: '60rem', //960px
+      },
     },
   },
   plugins: [],
