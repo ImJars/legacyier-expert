@@ -9,7 +9,6 @@ const Header = () => {
                             justify-between fixed'
             >
                 <div className='grid content-center'>
-                    <h1></h1>
                     <HamburguerMenu/>
                 </div>
                 <div className='grid content-center mr-10'>
