@@ -1,4 +1,5 @@
 import React from 'react'
+import DevelopmentIcons from './components/developmentIcons';
 
 const About = () => {
     return ( 
@@ -41,6 +42,9 @@ const About = () => {
                         <h1 className='text-center mb-5 font-bold'>
                             Here are some technologies I've been working with recently:
                         </h1>
+                    </div>
+                    <div className='mt-5'>
+                        <DevelopmentIcons />
                     </div>
                 </div>
             </div>
