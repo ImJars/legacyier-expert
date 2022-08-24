@@ -23,6 +23,9 @@ module.exports = {
       maxWidth: {
         240: '60rem', //960px
       },
+      translate: {
+        '1/5': '44%',
+      }
     },
   },
   plugins: [],
