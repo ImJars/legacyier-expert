@@ -13,8 +13,8 @@ const Section = styled.div`
   .line {
     width: 90px;
   height: 0.5px;
-  background-color: #8150FF;
-  border-color: #8150FF;
+  background-color: #A4A4A4;
+  border-color: #A4A4A4;
 }
 `
 
@@ -27,29 +27,59 @@ const Information = () => {
                 orientation="left"
             >
                 <div className='grid grid-cols-5 gap-x-6'>
-                    <a href="">
+                    <a 
+                        href="https://twitter.com/Im_Jars"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <SiTwitter 
-                            className='-rotate-90'
+                            className='h-5 w-5 -rotate-90 text-icon-color transition 
+                            ease-in-out hover:-translate-x-1 hover:text-Color-Text-H3 
+                            duration-200'
                         />
                     </a>
-                    <a href="">
+                    <a 
+                        href="https://www.instagram.com/jars.little/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <SiInstagram 
-                            className='-rotate-90'
+                            className='h-5 w-5 -rotate-90 text-icon-color transition 
+                            ease-in-out hover:-translate-x-1 hover:text-Color-Text-H3 
+                            duration-200'
                         />
                     </a>
-                    <a href="">
+                    <a 
+                        href="https://github.com/ImJars"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <FiGithub 
-                            className='-rotate-90'
+                            className='h-5 w-5 -rotate-90 text-icon-color transition 
+                            ease-in-out hover:-translate-x-1 hover:text-Color-Text-H3 
+                            duration-200'
                         />
                     </a>
-                    <a href="">
+                    <a 
+                        href="https://www.linkedin.com/in/angel-ramirez-08468212b/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <FaLinkedinIn 
-                            className='-rotate-90'
+                            className='h-5 w-5 -rotate-90 text-icon-color transition 
+                            ease-in-out hover:-translate-x-1 hover:text-Color-Text-H3 
+                            duration-200'
                         />
                     </a>
-                    <a href="">
+                    <a 
+                        href="https://codepen.io/Im_Jars"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <FaCodepen 
-                            className='-rotate-90'
+                            className='h-5 w-5 -rotate-90 text-icon-color transition 
+                            ease-in-out hover:-translate-x-1 hover:text-Color-Text-H3 
+                            duration-200'
                         />
                     </a>
                 </div>

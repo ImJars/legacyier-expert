@@ -1,6 +1,6 @@
 import React from 'react';
 // import RotatingText from './components/rotatingText';
-import Scroll from './components/Scroll';
+// import Scroll from './components/Scroll';
 import Img from './images/home.svg';
 
 const Home = () => {
@@ -40,7 +40,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='transform translate-y-32'>
-                    <Scroll />
+                    {/* <Scroll /> */}
                 </div>
             </div> 
         </div>
