@@ -4,11 +4,11 @@ var ReactRotatingText = require('react-rotating-text');
 const RotatingText = () => {
     return (
         <>
-            <div className='flex'>
-                <h1 className='font-thin text-base text-Color-Text-H3'>&#62;</h1>
+            <div className='flex text-xs mt-5'>
+                <h1 className='font-roboto text-Color-Text-H4'>&#62; &nbsp;</h1>
                 <ReactRotatingText 
-                    className='font-thin text-base'
-                    color='#8150FF'
+                    className='font-roboto'
+                    color='#E6E7E9'
                     items={[` I'm Software developer 💻`,
                     ` UX / UI developer 👨‍💻`,
                     ` Professional designer 📐`,
