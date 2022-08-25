@@ -23,8 +23,7 @@ const Information = () => {
         <>
             <Section
                 className="fixed text-Color-Text-H4 flex justify-end transform left-auto 
-                        rotate-90 -translate-y-3 translate-x-14 origin-left"
-                orientation="left"
+                        rotate-90 -translate-y-3 translate-x-14 origin-left invisible sm:visible"
             >
                 <div className='grid grid-cols-5 gap-x-6'>
                     <a 
@@ -89,12 +88,12 @@ const Information = () => {
             </Section>
             <Section
                 className="fixed justify-end flex rotate-90 -translate-y-1/2 translate-x-1/5
-                right-0 top-1/2 z-50 left-auto"
+                right-0 top-1/2 z-50 left-auto invisible sm:visible"
             >
                 <div 
                     className='font-roboto text-sm text-icon-color transition : ;
                             ease-in-out hover:-translate-x-1 hover:text-Color-Text-H3 
-                            duration-200'
+                            duration-200 '
                 >
                     <a href="mailto:hi.legacyier@gmail.com">
                         hi.legacyier@gmail.com
