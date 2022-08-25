@@ -1,7 +1,7 @@
 import React from 'react';
 // import RotatingText from './components/rotatingText';
 // import Scroll from './components/Scroll';
-import Img from './images/home.svg';
+// import Img from './images/home.svg';
 
 const Home = () => {
     return ( 
@@ -34,9 +34,9 @@ const Home = () => {
                             </h3>
                             {/* <RotatingText/> */}
                         </div>
-                        <div className='flex justify-center'>
+                        {/* <div className='flex justify-center'>
                             <img className='h-96' src={Img} alt="" />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className='transform translate-y-32'>
