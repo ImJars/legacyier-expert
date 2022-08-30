@@ -6,7 +6,7 @@ import RotatingText from './components/rotatingText';
 const Home = () => {
     return ( 
         <>
-        <div className='w-full h-screen bg-Background'>
+        <div className='w-full h-screen bg-Background -z-50'>
             <div className='h-screen grid content-center'>
                 <div>
                     <div 
