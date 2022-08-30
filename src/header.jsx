@@ -103,11 +103,11 @@ const Header = () => {
                     <HamburguerMenu clicked={clicked} handleClick={handleClick}/>
                 </div>
                 <div className={`links z-20 ${clicked ? 'active' : ''}`}>
-                        <a href="#">Home</a>
-                        <a href="#">About</a>
-                        <a href="#">Works</a>
-                        <a href="#">Portafolio</a>
-                        <a href="#">Contact</a>
+                        <a onClick={handleClick} href="#">Home</a>
+                        <a onClick={handleClick} href="#">About</a>
+                        <a onClick={handleClick} href="#">Works</a>
+                        <a onClick={handleClick} href="#">Portafolio</a>
+                        <a onClick={handleClick} href="#">Contact</a>
                 </div>
                 <BgDiv className={`initial z-10 ${ clicked ? 'active' : ''}`}></BgDiv>
             </NavContainer>
