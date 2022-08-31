@@ -4,19 +4,12 @@ import styled from 'styled-components';
 import HamburguerMenu from './components/HamburguerMenu';
 
 const NavContainer = styled.div`
-
-h2{
-    color: white;
-    font-weight: 400;
-    span{
-      font-weight: bold;
-    }
-  }
-  padding: .4rem;
-  background-color: #333;
+  position: fixed;
+  padding-top: 10px;
+  padding-left: 10px;
+  width: 100%;
+  height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   a{
     color: white;
     text-decoration: none;
@@ -36,16 +29,7 @@ h2{
       font-size: 2rem;
       display: block;
     }
-    @media(min-width: 768px){
-      position: initial;
-      margin: 0;
-      a{
-        font-size: 1rem;
-        color: white;
-        display: inline;
-      }
-      display: block;
-    }
+    
   }
   .links.active{
     width: 100%;
@@ -71,7 +55,7 @@ h2{
 `
 
 const BgDiv = styled.div`
-  background-color: #222;
+  background-color: #228DFF;
   position: absolute;
   top: -1000px;
   left: -1000px;
@@ -103,11 +87,11 @@ const Header = () => {
                     <HamburguerMenu clicked={clicked} handleClick={handleClick}/>
                 </div>
                 <div className={`links z-20 ${clicked ? 'active' : ''}`}>
-                        <a onClick={handleClick} href="#">Home</a>
-                        <a onClick={handleClick} href="#">About</a>
-                        <a onClick={handleClick} href="#">Works</a>
-                        <a onClick={handleClick} href="#">Portafolio</a>
-                        <a onClick={handleClick} href="#">Contact</a>
+                        <a className='font-roboto font-bold' onClick={handleClick} href="#">Home</a>
+                        <a className='font-roboto font-bold' onClick={handleClick} href="#">About</a>
+                        <a className='font-roboto font-bold' onClick={handleClick} href="#">Works</a>
+                        <a className='font-roboto font-bold' onClick={handleClick} href="#">Portafolio</a>
+                        <a className='font-roboto font-bold' onClick={handleClick} href="#">Contact</a>
                 </div>
                 <BgDiv className={`initial z-10 ${ clicked ? 'active' : ''}`}></BgDiv>
             </NavContainer>
