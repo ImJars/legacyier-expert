@@ -1,15 +1,14 @@
 import React, {useState} from 'react'
 import styled from 'styled-components';
-// import LinkHeader from './components/LinkHeader';
-import HamburguerMenu from './components/HamburguerMenu';
+import HamburguerMenu from './HamburguerMenu';
 
 const NavContainer = styled.div`
-  position: fixed;
   padding-top: 10px;
   padding-left: 10px;
   width: 100%;
   height: 100%;
   display: flex;
+  background: #011326;
   a{
     color: white;
     text-decoration: none;
@@ -37,7 +36,7 @@ const NavContainer = styled.div`
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    top: 30%;
+    top: 400%;
     left: 0;
     right: 0;
     text-align: center;
@@ -48,7 +47,7 @@ const NavContainer = styled.div`
     }
   }
   .burguer{
-    @media(min-width: 768px){
+    @media(min-width: 640px){
       display: none;
     }
   }
@@ -68,7 +67,7 @@ const BgDiv = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 1450%;
   }
   `
 
