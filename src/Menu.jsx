@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/headerMenu';
+import Link from './components/LinkHeader';
 
 const Menu = () => {
     return ( 
@@ -11,23 +12,28 @@ const Menu = () => {
                     </div>
                     <div
                         className='invisible sm:visible h-20 text-white grid grid-cols-5 
-                                content-center mr-20 list-none'
+                                content-center mr-20'
                     >
-                        <li>
-                            Home
-                        </li>
-                        <li>
-                            About
-                        </li>
-                        <li>
-                            Experience
-                        </li>
-                        <li>
-                            Work
-                        </li>
-                        <li>
-                            Contact
-                        </li>
+                        <Link
+                            textLink={'Home'}
+                            link={'#'}
+                        />
+                        <Link
+                            textLink={'About'}
+                            link={'#'}
+                        />
+                        <Link
+                            textLink={'Experience'}
+                            link={'#'}
+                        />
+                        <Link
+                            textLink={'Work'}
+                            link={'#'}
+                        />
+                        <Link
+                            textLink={'Contact'}
+                            link={'#'}
+                        />
                     </div>
                 </div>
             </div>
