@@ -25,7 +25,10 @@ module.exports = {
       },
       translate: {
         '1/5': '44%',
-      }
+      },
+      width: {
+        'tarjet': '60rem',
+      },
     },
   },
   plugins: [],
