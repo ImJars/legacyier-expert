@@ -16,23 +16,23 @@ const Menu = () => {
                     >
                         <Link
                             textLink={'Home'}
-                            link={'#'}
+                            link={'#Home'}
                         />
                         <Link
                             textLink={'About'}
-                            link={'#'}
+                            link={'#About'}
                         />
                         <Link
                             textLink={'Experience'}
-                            link={'#'}
+                            link={'#Experience'}
                         />
                         <Link
                             textLink={'Work'}
-                            link={'#'}
+                            link={'#Work'}
                         />
                         <Link
                             textLink={'Contact'}
-                            link={'#'}
+                            link={'#Contact'}
                         />
                     </div>
                 </div>

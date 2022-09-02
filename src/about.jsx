@@ -4,8 +4,8 @@ import DevelopmentIcons from './components/developmentIcons';
 const About = () => {
     return ( 
         <>
-            <div className='w-full flex justify-center'>
-                <div className="min-h-750 max-w-240 grid content-center mx-10 sm:mx-0">
+            <div id='About' className='w-full flex justify-center'>
+                <div className="min-h-750 max-w-240 grid content-center mx-10 sm:mx-0 my-32 sm:my-0">
                     <h1 
                         className='text-center text-4xl font-roboto font-bold text-gray-800 mb-10'
                     >
