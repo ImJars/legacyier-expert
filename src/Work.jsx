@@ -1,13 +1,18 @@
 import React from 'react'
+import CardWork from './components/cardWork';
 
-const Portafolio = () => {
+const Work = () => {
     return ( 
         <>
-        <div id='Work' className='w-full h-screen'>
-            <h1>Where I’ve Worked</h1>
+        <div id='Work' className='w-full flex justify-start'>
+            <div className='min-h-750 max-w-240'>
+                <div>
+                    <CardWork />
+                </div>
+            </div>
         </div>
         </>
      );
 }
  
-export default Portafolio;
+export default Work;
