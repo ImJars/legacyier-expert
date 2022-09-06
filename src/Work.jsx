@@ -68,6 +68,21 @@ const Work = () => {
                             'Tuve presentacion del proyecto ante el personal a cargo, dando reportes de los avances en el desarrollo y trabajando en equipo.'
                         }
                     />
+                    <CardWork 
+                        companyLink={ 'https://sqdesarrollo.com.mx/' }
+                        companyName={ 'SQDesarrollo & Bonafont' }
+                        worked={ 'Design and programming' }
+                        date={ 'Jan 2018 - Dec 2018' }
+                        textOneVisible={
+                            'Diseñe, escribi y analice datos en el desarrollo de un proyecto de software sobre administracion, analisis y calculo de datos para la empresa Bonafont, utilizando las mejores practicas de diseño, programacion y analisis de datos.'
+                        }
+                        textTwoInvisible={
+                            'Trabaje con la tecnologia de Visual Basic, excel y SQL Server dando prioridad en el desarrollo y analisis minucioso de datos.'
+                        }
+                        textThreeInvisible={
+                            'Tuve presentacion del proyecto ante el personal a cargo, dando reportes de los avances en el desarrollo y trabajando en equipo.'
+                        }
+                    />
                 </div>
             </div>
         </div>
