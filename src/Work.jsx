@@ -24,7 +24,7 @@ const Work = () => {
 
                     />
                     <CardWork 
-                    companyLink={ 'https://blissddm.xyz/es/'}
+                        companyLink={ 'https://blissddm.xyz/es/'}
                         companyName={ 'Bliss DDM' }
                         worked={ 'Web developer' }
                         date={ 'Jan 2021 - Dec 2021'}
@@ -37,6 +37,21 @@ const Work = () => {
                         textThreeInvisible={
                             'Comunicacion con el personal a cargo satifaciendo todos los requerimientos y al mismo tiempo aprendiendo nuevas habilidades, dando reportes de los avances en el desarrollo web y trabajando en equipo.'
                         }
+                    />
+                    <CardWork 
+                        companyLink={ 'https://www.uaeh.edu.mx/' }
+                        companyName={ 'UAEH' }
+                        worked={ 'Design and programming' }
+                        date={ 'Jan 2020 - Dec 2020' }
+                        textOneVisible={
+                            'Diseñe y escribi codigo moderno en el desarrollo de un proyecto de software sobre control de versiones, utilizando las mejores practicas de programacion.'
+                        }
+                        textTwoInvisible={
+                            'Trabaje con una variedad de tecnologias y plataformas como .Net y MySQL.'
+                        }
+                        textThreeInvisible={
+                            'Tuve presentacion del proyecto ante el personal a cargo, dando reportes de los avances en el desarrollo y trabajando en equipo.'
+                        }        
                     />
                 </div>
             </div>
