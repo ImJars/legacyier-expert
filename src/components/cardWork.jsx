@@ -1,7 +1,7 @@
 import React from 'react';
 import SlideToggle from "react-slide-toggle";
 
-const CardWork = ({ companyLink, companyName, worked, date, textOneVisible, textTwoInvisible, textThreeInvisible }) => {
+const CardWork = ({ companyLink, companyName, worked, date, textOneVisible, textTwoInvisible, textThreeInvisible }) => {    
     return ( 
         <>
             <div className='border-l-8 border-cyan-900 rounded-lg flex 
@@ -10,7 +10,7 @@ const CardWork = ({ companyLink, companyName, worked, date, textOneVisible, text
                         hover:shadow-2xl'>   
                 <SlideToggle
                     collapsed
-                    render={({ toggle, setCollapsibleElement }) => (
+                    render={({ toggleState, toggle, setCollapsibleElement }) => (
                         <div className="slide-toggle mx-10 my-5 justify-start">
                             <div>
                                 <a
@@ -64,9 +64,9 @@ const CardWork = ({ companyLink, companyName, worked, date, textOneVisible, text
                                 className="border rounded-lg border-cyan-900 text-white
                                             px-2 py-1 mt-5 bg-cyan-900 hover:bg-white hover:text-cyan-900
                                             transition ease-in-out duration-500" 
-                                onClick={toggle}
+                                 onClick={toggle}
                             >
-                                Mas informacion
+                                {toggleState === "EXPANDED" ? "- Informacion" : "+ Informacion"}
                             </button>
                         </div>
                     )}
