@@ -8,6 +8,22 @@ const Work = () => {
             <div className='min-h-750 max-w-240'>
                 <div>
                     <CardWork 
+                        companyLink='https://www.instagram.com/legacyier_official/'
+                        companyName='Legacyier'
+                        worked='Chief Executive Officer'
+                        date={ 'Jan 2022 - Present' }
+                        textOneVisible={
+                            'Soy el creador y encargado del nombre Legacyier, mi mision es dejar huella donde los clientes buscan facilidad y una excelente experiencia al utilizar alguno de nuestros desarrollos, hacer que nuevos negocios implementen las nuevas tecnologias de forma segura, sencilla y eficiente.'
+                        }
+                        textTwoInvisible={
+                            'Legacyier es una startup que se dedica a la innovacion y creacion web, principalmente enfocado en el mundo de la tecnologia. Actualmente estamos trabajando en la implementacion web3 y blockchain, trabajando para SMEs haciendo que no se queden fuera de esta gran tecnologia.'
+                        }
+                        textThreeInvisible={
+                            'Comunicacion directa con clientes/empresas para entender sus necesidades y poder ofrecerles la mejor solucion posible, asi como tambien la creacion de nuevos productos y servicios.'
+                        }
+
+                    />
+                    <CardWork 
                     companyLink={ 'https://blissddm.xyz/es/'}
                         companyName={ 'Bliss DDM' }
                         worked={ 'Web developer' }
