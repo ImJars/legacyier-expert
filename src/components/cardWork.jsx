@@ -1,7 +1,7 @@
 import React from 'react';
 import SlideToggle from "react-slide-toggle";
 
-const CardWork = ({ companyName, worked, date, textOneVisible, textTwoInvisible, textThreeInvisible }) => {
+const CardWork = ({ companyLink, companyName, worked, date, textOneVisible, textTwoInvisible, textThreeInvisible }) => {
     return ( 
         <>
             <div className='border-l-8 border-cyan-900 rounded-lg flex 
@@ -14,7 +14,7 @@ const CardWork = ({ companyName, worked, date, textOneVisible, textTwoInvisible,
                         <div className="slide-toggle mx-10 my-5 justify-start">
                             <div>
                                 <a
-                                    href="https://www.google.com.mx/?hl=es-419"
+                                    href={ companyLink}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className='text-4xl font-roboto 

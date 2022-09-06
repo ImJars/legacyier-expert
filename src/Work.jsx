@@ -8,6 +8,7 @@ const Work = () => {
             <div className='min-h-750 max-w-240'>
                 <div>
                     <CardWork 
+                    companyLink={ 'https://blissddm.xyz/es/'}
                         companyName={ 'Bliss DDM' }
                         worked={ 'Web developer' }
                         date={ 'Jan 2021 - Dec 2021'}
