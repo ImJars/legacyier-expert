@@ -53,6 +53,21 @@ const Work = () => {
                             'Tuve presentacion del proyecto ante el personal a cargo, dando reportes de los avances en el desarrollo y trabajando en equipo.'
                         }        
                     />
+                    <CardWork 
+                        companyLink={ 'https://sqdesarrollo.com.mx/' }
+                        companyName={ 'SQDesarrollo & Holcim Mexico' }
+                        worked={ 'Design and programming' }
+                        date={ 'Jan 2019 - Dec 2019' }
+                        textOneVisible={
+                            'Diseñe, escribi y analice datos en el desarrollo de un proyecto de software sobre un simulador de costes de mano de obra en los proyectos de la empresa Holcim Mexico, utilizando las mejores practicas de programacion y analisis de datos.'
+                        }
+                        textTwoInvisible={
+                            'Trabaje con las tecnologias de .NET y SQL Server dando prioridad en el desarrollo y solucion al problema de importacion de datos.'
+                        }
+                        textThreeInvisible={
+                            'Tuve presentacion del proyecto ante el personal a cargo, dando reportes de los avances en el desarrollo y trabajando en equipo.'
+                        }
+                    />
                 </div>
             </div>
         </div>
