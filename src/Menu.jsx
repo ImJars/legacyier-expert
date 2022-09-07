@@ -5,7 +5,7 @@ import Link from './components/LinkHeader';
 const Menu = () => {
     return ( 
         <>
-            <div className='bg-Background w-full fixed'>
+            <div className='bg-Background w-full fixed z-10'>
                 <div className='flex justify-between'>
                     <div>
                         <Header />

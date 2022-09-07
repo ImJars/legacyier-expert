@@ -7,23 +7,23 @@ const CardWork = ({ companyLink, companyName, worked, date, textOneVisible, text
             <div className='border-l-8 border-cyan-900 rounded-lg flex 
                         justify-start mx-10 transition 
                         ease-in-out hover:translate-x-2 duration-500
-                        hover:shadow-2xl'>   
+                        hover:shadow-2xl z-0 max-w-240'>   
                 <SlideToggle
                     collapsed
                     render={({ toggleState, toggle, setCollapsibleElement }) => (
                         <div className="slide-toggle mx-10 my-5 justify-start">
                             <div>
                                 <a
-                                    href={ companyLink}
+                                    href={ companyLink }
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className='text-4xl font-roboto 
+                                    className='text-2xl font-roboto 
                                             font-bold text-gray-800'
                                 >
                                     { companyName }
                                 </a>
                                 <h2
-                                    className='text-xl font-roboto 
+                                    className='text-base font-roboto 
                                             font-bold text-Color-Text-H3'
                                 >
                                     { worked }
@@ -61,8 +61,7 @@ const CardWork = ({ companyLink, companyName, worked, date, textOneVisible, text
                                 </font>
                             </div>
                             <button
-                                className="border rounded-lg border-cyan-900 text-white
-                                            px-2 py-1 mt-5 bg-cyan-900 hover:bg-white hover:text-cyan-900
+                                className="mt-2 font-roboto font-bold text-xs border rounded-lg
                                             transition ease-in-out duration-500" 
                                  onClick={toggle}
                             >

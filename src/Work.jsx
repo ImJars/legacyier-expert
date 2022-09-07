@@ -4,8 +4,22 @@ import CardWork from './components/cardWork';
 const Work = () => {
     return ( 
         <>
-        <div id='Work' className='w-full flex justify-center'>
-            <div className='min-h-750 max-w-240'>
+        <div id='Work' className='w-full justify-center'>
+            <div className='flex justify-center'>
+                <h1
+                    className='text-center text-4xl font-roboto font-bold 
+                                text-gray-800 mb-10'
+                >
+                    Where I’ve&nbsp;
+                    <font className="text-transparent bg-clip-text bg-gradient-to-r
+                                    from-Color-Text-H3 via-Color-Text-H1 to-Color-Text-H2
+                                    font-roboto font-bold"
+                    >
+                        Worked
+                    </font>
+                </h1>
+            </div>
+            <div className='flex justify-center'>
                 <div>
                     <CardWork 
                         companyLink='https://www.instagram.com/legacyier_official/'
