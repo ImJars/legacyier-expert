@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react'
+import React, { useEffect } from 'react'
 import CardWork from './components/cardWork';
 import { motion, useAnimation  } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
