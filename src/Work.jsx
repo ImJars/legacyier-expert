@@ -1,11 +1,39 @@
-import React from 'react'
+import React, { useEffect} from 'react'
 import CardWork from './components/cardWork';
+import { motion, useAnimation  } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const Work = () => {
+
+    const { ref, inView } = useInView({
+        threshold: 0,
+        triggerOnce: true
+    });
+
+    const animation = useAnimation();
+
+    useEffect(() => {
+        if (inView) {
+            animation.start({
+                x: 0,
+                transition: {
+                    type: 'spring', duration: 1, bounce: 0.3
+                }
+            });
+        }
+        if (!inView) {
+            animation.start({
+                x: '-100vw'
+            });
+        }
+    },[inView]);
+
     return ( 
         <>
-        <div id='Work' className='w-full justify-center'>
-            <div className='flex justify-center'>
+        <div id='Work' ref={ref} className='w-full justify-center'>
+            <motion.div className='flex justify-center'
+                animate={ animation }
+            >
                 <h1
                     className='text-center text-4xl font-roboto font-bold 
                                 text-gray-800 mb-10'
@@ -18,7 +46,7 @@ const Work = () => {
                         Worked
                     </font>
                 </h1>
-            </div>
+            </motion.div>
             <div className='flex justify-center'>
                 <div>
                     <CardWork 

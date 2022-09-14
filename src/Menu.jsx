@@ -1,13 +1,16 @@
 import React from 'react';
 import Header from './components/headerMenu';
 import Link from './components/LinkHeader';
+import { motion  } from 'framer-motion';
 
-const Menu = () => {
+const Menu = ({ animation }) => {
     return ( 
         <>
-            <div className='bg-Background w-full fixed z-10'>
+            <motion.div className='bg-Background w-full fixed z-10'
+                animate={ animation }
+            >
                 <div className='flex justify-between'>
-                    <div>
+                    <div className='sm:invisible visible'>
                         <Header />
                     </div>
                     <div
@@ -36,7 +39,7 @@ const Menu = () => {
                         />
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </>
      );
 }
