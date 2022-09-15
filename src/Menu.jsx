@@ -31,28 +31,28 @@ const Menu = ({ animation }) => {
                 opacity: 1,
                 y: 0,
                 transition: {
-                    type: 'spring', duration: 1, delay: 1.5
+                    type: 'spring', duration: 1, delay: 1.1
                 }
             });
             animationExperience.start({
                 opacity: 1,
                 y: 0,
                 transition: {
-                    type: 'spring', duration: 1, delay: 2
+                    type: 'spring', duration: 1, delay: 1.2
                 }
             });
             animationWork.start({
                 opacity: 1,
                 y: 0,
                 transition: {
-                    type: 'spring', duration: 1, delay: 2.5
+                    type: 'spring', duration: 1, delay: 1.3
                 }
             });
             animationContact.start({
                 opacity: 1,
                 y: 0,
                 transition: {
-                    type: 'spring', duration: 1, delay: 3
+                    type: 'spring', duration: 1, delay: 1.4
                 }
             });
         }

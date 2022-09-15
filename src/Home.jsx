@@ -13,7 +13,6 @@ const Home = () => {
     const animation = useAnimation();
     const animationSubtitle = useAnimation();
     const animationText = useAnimation();
-    const animationRotating = useAnimation();
 
     useEffect(() => {
         if (inView) {
@@ -21,35 +20,28 @@ const Home = () => {
                 y: 0,
                 opacity: 1,
                 transition: {
-                    type: 'spring', duration: 4, bounce: 0
+                    type: 'spring', duration: 2, delay: 2
                 }
             });
             animationSubtitle.start({
                 y: 0,
                 opacity: 1,
                 transition: {
-                    type: 'spring', duration: 6, bounce: 0
+                    type: 'spring', duration: 2, delay: 2.1
                 }
             });
             animationText.start({
-                x: 0,
+                y: 0,
                 opacity: 1,
                 transition: {
-                    type: 'spring', duration: 8, bounce: 0
-                }
-            });
-            animationRotating.start({
-                x: 0,
-                opacity: 1,
-                transition: {
-                    type: 'spring', duration: 8, bounce: 0
+                    type: 'spring', duration: 2, delay: 2.2
                 }
             });
             
         }
         if (!inView) {
             animation.start({
-                y: '-10vh',
+                y: '30vh',
                 opacity: 0,
             });
             animationSubtitle.start({
@@ -57,11 +49,7 @@ const Home = () => {
                 opacity: 0,
             });
             animationText.start({
-                x: '-30vh',
-                opacity: 0,
-            });
-            animationRotating.start({
-                x: '60vh',
+                y: '30vh',
                 opacity: 0,
             });
         }
@@ -102,10 +90,8 @@ const Home = () => {
                                 I'm a software developer specializing in creating exceptional<br/> 
                                 products and digital experiences. I am currently focused on<br/> 
                                 creating <font className='text-Color-Text-H3'>Web3</font> technology products.
-                            </motion.h3>
-                            <motion.div className='opacity-0' animate={animationRotating}>
                                 <RotatingText/>
-                            </motion.div>
+                            </motion.h3>
                         </div>
                     </div>
                 </div>

@@ -35,7 +35,7 @@ const Information = ({ animationInfo }) => {
             animation.start({
                 opacity: 1,
                 transition: {
-                    type: 'spring', duration: 10, bounce: 0
+                    type: 'spring', duration: 2, delay: 4
                 }
             });
         }

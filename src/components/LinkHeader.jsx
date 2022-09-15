@@ -10,9 +10,8 @@ justify-content: center;
         display: inline-block;
         color: #E6E7E9;
         position: relative;
-        text-decoration: none;
         margin-left: 5%;
-        letter-spacing: .15rem;
+        letter-spacing: .1rem;
     }
     a:before,
     a:after {

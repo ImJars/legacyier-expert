@@ -22,13 +22,13 @@ const App = () => {
                 background: '#011326',
                 boxShadow: '0px 0px 20px 10px #011326',
                 transition: {
-                    type: 'spring', duration: 1, bounce: 0.3
+                    type: 'spring', duration: 1, bounce: 0
                 },
             });
             animationInformation.start({
                 color: '#011326',
                 transition: {
-                    type: 'spring', duration: .1, bounce: 0.1
+                    type: 'spring', duration: .1, bounce: 0
                 },
             });
         }
@@ -37,14 +37,14 @@ const App = () => {
                 background: '#011326',
                 boxShadow: '0px 0px 0px 0px #011326',
                 transition: {
-                    type: 'spring', duration: 1, bounce: 0.3
+                    type: 'spring', duration: 1, bounce: 0
                 }, 
             });
             animationInformation.start({
                 position: 'fixed',
                 color: '#A4A4A4',
                 transition: {
-                    type: 'spring', duration: .1, bounce: 0.1
+                    type: 'spring', duration: .1, bounce: 0
                 },
             });
         }
