@@ -29,6 +29,10 @@ module.exports = {
       width: {
         'tarjet': '60rem',
       },
+      transitionDelay: {
+        '0': '0ms',
+        '5': '5ms',
+      },
     },
   },
   plugins: [],
