@@ -56,13 +56,13 @@ justify-content: center;
 `
 
 
-const LinkHeader = ({ textLink, link }) => {
+const LinkHeader = ({ textLink, link, classNames }) => {
     return ( 
         <>
             <Link>
                 <a
                     href={ link }
-                    className="link4 font-roboto font-bold items-center"
+                    className={`${classNames} link4 font-roboto font-bold items-center`}
                 >
                     { textLink }
                 </a>
