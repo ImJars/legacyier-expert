@@ -1,13 +1,56 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import DevelopmentIcons from './components/developmentIcons';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const About = () => {
+
+    const { ref, inView } = useInView({
+        threshold: 0.1,
+        triggerOnce: true,
+        delay: 1000
+    })
+    const animationTitle = useAnimation();
+    const animationText = useAnimation();
+
+    useEffect(() => {
+        if (inView) {
+            animationTitle.start({
+                opacity: 1,
+                x: 0,
+                transition: {
+                    type: 'spring', duration: 2, delay: .1
+                }
+            });
+            animationText.start({
+                opacity: 1,
+                x: 0,
+                transition: {
+                    type: 'spring', duration: 2, delay: .2
+                }
+            });
+        }
+        if (!inView) {
+            animationTitle.start({
+                opacity: 0,
+                x: '5vw',
+            });
+        }
+        if (!inView) {
+            animationText.start({
+                opacity: 0,
+                x: '5vw',
+            });
+        }
+    },[inView]);
+
     return ( 
         <>
-            <div id='About' className='w-full flex justify-center'>
+            <div id='About' ref={ref} className='w-full h-screen flex justify-center'>
                 <div className="min-h-750 max-w-240 grid content-center mx-10 sm:mx-0 my-32 sm:my-0">
-                    <h1 
-                        className='text-center text-4xl font-roboto font-bold text-gray-800 mb-10'
+                    <motion.h1 
+                        animate={ animationTitle }
+                        className='opacity-0 text-center text-4xl font-roboto font-bold text-gray-800 mb-10'
                     >
                         About&nbsp; 
                         <font className="text-transparent bg-clip-text bg-gradient-to-r
@@ -16,8 +59,11 @@ const About = () => {
                         >
                             Me
                         </font>
-                    </h1>
-                    <div className='font-roboto'>
+                    </motion.h1>
+                    <motion.div
+                        animate={ animationText }
+                        className='opacity-0 font-roboto'
+                    >
                         <h1 className='text-center mb-5'>
                            <font className="font-bold">Hello!</font> My name is <font className="font-bold">Ángel</font> and I like technology, I enjoy 
                             creating web applications and developing software. I started 
@@ -42,7 +88,7 @@ const About = () => {
                         <h1 className='text-center mb-5 font-bold'>
                             Here are some technologies I've been working with recently:
                         </h1>
-                    </div>
+                    </motion.div>
                     <div className='mt-5'>
                         <DevelopmentIcons />
                     </div>
