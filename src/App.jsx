@@ -5,7 +5,7 @@ import { useAnimation  } from 'framer-motion';
 import Home from './Home';
 import Information from './information';
 import About from './about';
-import Work from './Work';
+// import Work from './Work';
 
 const App = () => {
     const { ref, inView } = useInView({
@@ -57,7 +57,7 @@ const App = () => {
             <Home/>
             <div ref={ref}>
                 <About/>
-                <Work/>
+                {/* <Work/> */}
             </div>
         </div>
 )}

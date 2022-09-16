@@ -1,5 +1,4 @@
 import React from 'react';
-import SlideToggle from "react-slide-toggle";
 
 const CardWork = ({ companyLink, companyName, worked, date, textOneVisible, textTwoInvisible, textThreeInvisible }) => {    
     return ( 
@@ -8,7 +7,7 @@ const CardWork = ({ companyLink, companyName, worked, date, textOneVisible, text
                         justify-start mx-10 transition 
                         ease-in-out hover:translate-x-2 duration-500
                         hover:shadow-2xl z-0 max-w-240'>   
-                <SlideToggle
+                <div
                     collapsed
                     render={({ toggleState, toggle, setCollapsibleElement }) => (
                         <div className="slide-toggle mx-10 my-5 justify-start">

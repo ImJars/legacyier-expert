@@ -13,7 +13,6 @@
     "react-intersection-observer": "^9.4.0",
     "react-rotating-text": "^1.4.1",
     "react-scripts": "^5.0.1",
-    "react-slide-toggle": "^0.3.5",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },
