@@ -6,6 +6,7 @@ import Home from './Home';
 import Information from './information';
 import About from './about';
 import Experience from './Experience';
+import Experienc from './Experienc';
 // import Work from './Work';
 
 const App = () => {
@@ -59,6 +60,7 @@ const App = () => {
             <div ref={ref}>
                 <About/>
                 <Experience />
+                <Experienc/>
                 {/* <Work/> */}
             </div>
         </div>
