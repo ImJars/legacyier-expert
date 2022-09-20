@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import TabContent from './components/tabContentExp';
 
 const Tablas = styled.div`
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
 
 @media screen and (max-width: 768px) {
     overflow: hidden;
@@ -12,16 +17,14 @@ justify-content: center;
     .tabs {
         position: relative;
         width: 680px;
-        height: 360px;
+        height: 460px;
         padding: 30px 20px;
-        background: #f5f5f5;
-        box-shadow: 5px 5px 10px 5px #ccc;
         overflow: hidden;
         .tab-header{
             float: left;
-            width: 180px;
+            width: 125px;
             height: 100%;
-            border-right: 1px solid #ccc;
+            border-right: 1px solid #bfa6ff;
         }
         .tab-header > div {
             margin-bottom: 5px;
@@ -34,7 +37,8 @@ justify-content: center;
         }
         .tab-header > div:hover,
         .tab-header > div.active {
-            color: #00acee;
+            transition: all 500ms ease-in-out;
+            color: #8150FF;
         }
         .tab-header > div i{
             display: inline-block;
@@ -44,35 +48,23 @@ justify-content: center;
             height: 100%;
             overflow: hidden;
         }
-        .tab-content > div > i {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            background: #555;
-            color: #f5f5f5;
-            font-size: 25px;
-            font-weight: 600;
-            text-align: center;
-            line-height: 50px;
-            border-radius: 50%;
-        }
         .tab-content > div {
             position: absolute;
             text-align: center;
-            padding: 5px 10px;
-            top: -200%;
+            padding:0px 0px 0px 10px;
+            opacity: 0;
             text-align: justify;
-            transition: all 500ms ease-in-out;
+            transition: all 300ms ease-in-out;
         }
         .tab-content > div.active {
-            top: 0px;
+            opacity: 1;
         }
         .tab-indicator {
             position: absolute;
             width: 4px;
             height: 50px;
-            background: #00acee;
-            left: 198px;
+            background: #8150FF;
+            left: 143px;
             top: 30px;
             transition: all 500ms ease-in-out;
         }
@@ -83,14 +75,16 @@ const Experienc = () => {
     function changeTab(index) {
         setTab(index);
         if ( index === 1 ) {
-            document.querySelector('.tab-indicator').style.top = '30px';
+            document.querySelector('.tab-indicator').style.top = '20px';
         } else if ( index === 2 ) {
-            document.querySelector('.tab-indicator').style.top = '80px';
+            document.querySelector('.tab-indicator').style.top = '70px';
         } else if ( index === 3 ) {
             document.querySelector('.tab-indicator').style.top = '130px';
         } else if ( index === 4 ) {
-            document.querySelector('.tab-indicator').style.top = '180px';
-        } 
+            document.querySelector('.tab-indicator').style.top = '190px';
+        } else if ( index === 5 ) {
+            document.querySelector('.tab-indicator').style.top = '250px';
+        }
         console.log(index);
     }
     return ( 
@@ -98,6 +92,19 @@ const Experienc = () => {
             <div className='w-full h-screen grid content-center 
                             justify-center'
             >
+                <h1
+                    className='text-center text-4xl font-roboto font-bold 
+                    text-gray-800 mb-5 mt-40 sm:mt-0'
+                >
+                    Where I’ve&nbsp;
+                    <font
+                        className="text-transparent bg-clip-text bg-gradient-to-r
+                                from-Color-Text-H3 via-Color-Text-H1 to-Color-Text-H2
+                                font-roboto font-bold"
+                    >
+                        Worked
+                    </font>
+                </h1>
                 <Tablas>
                     <div className="tabs">
                         <div className="tab-header">
@@ -137,14 +144,12 @@ const Experienc = () => {
                         </div>
                         <div className="tab-content">
                             <div className={tab === 1 ? 'active': ''}>
-                                <h1>This is a code section</h1>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur 
-                                    adipisicing elit. Beatae delectus atque sunt, 
-                                    aut maiores obcaecati incidunt! Placeat, eius? 
-                                    Fugit pariatur maiores soluta non quos eos eligendi 
-                                    numquam ex tempore a?
-                                </p>
+                                <TabContent 
+                                    title={'Legacyier'}
+                                    work={'Chief Executive Officer'}
+                                    date={'Jan 2022 - Present'}
+                                    content={'Legacyier is a company that offers services in the area of ​​software development, web design, web hosting, web maintenance, web positioning, among others. I was in charge of the development of the web page, the design of the logo and the design of the web page. I also did the web hosting and the web positioning of the page.'}
+                                />
                             </div>
                             <div className={tab === 2 ? 'active': ''}>
                                 <h1>This is a About section</h1>
@@ -168,6 +173,16 @@ const Experienc = () => {
                             </div>
                             <div className={tab === 4 ? 'active': ''}>
                                 <h1>This is a contact section</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur 
+                                    adipisicing elit. Beatae delectus atque sunt, 
+                                    aut maiores obcaecati incidunt! Placeat, eius? 
+                                    Fugit pariatur maiores soluta non quos eos eligendi 
+                                    numquam ex tempore a?
+                                </p>
+                            </div>
+                            <div className={tab === 5 ? 'active': ''}>
+                                <h1>This is a SQDesarrollo section</h1>
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur 
                                     adipisicing elit. Beatae delectus atque sunt, 
