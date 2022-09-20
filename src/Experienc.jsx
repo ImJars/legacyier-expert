@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Tablas = styled.div`
+display: flex;
+justify-content: center;
+
+@media screen and (max-width: 768px) {
+    overflow: hidden;
+}
+
     .tabs {
         position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         width: 680px;
         height: 360px;
         padding: 30px 20px;
@@ -20,13 +24,13 @@ const Tablas = styled.div`
             border-right: 1px solid #ccc;
         }
         .tab-header > div {
+            margin-bottom: 5px;
             height: 50px;
-            line-height: 50px;
             font-size: 16px;
             font-weight: 600;
             color: #888;
             cursor: pointer;
-            padding-left: 10px;
+            padding-left: 0px;
         }
         .tab-header > div:hover,
         .tab-header > div.active {
@@ -34,8 +38,6 @@ const Tablas = styled.div`
         }
         .tab-header > div i{
             display: inline-block;
-            margin-left: 10px;
-            margin-right: 5px;
         }
         .tab-content{
             position: relative;
@@ -57,8 +59,9 @@ const Tablas = styled.div`
         .tab-content > div {
             position: absolute;
             text-align: center;
-            padding: 40px 20px;
+            padding: 5px 10px;
             top: -200%;
+            text-align: justify;
             transition: all 500ms ease-in-out;
         }
         .tab-content > div.active {
@@ -92,7 +95,9 @@ const Experienc = () => {
     }
     return ( 
         <>
-            <div className='w-full h-screen grid content-center justify-center'>
+            <div className='w-full h-screen grid content-center 
+                            justify-center'
+            >
                 <Tablas>
                     <div className="tabs">
                         <div className="tab-header">
@@ -100,25 +105,31 @@ const Experienc = () => {
                                 onClick={() => changeTab(1)}
                                 className={tab === 1 ? 'active' : ''}
                             >
-                                <i className='fa fa-code'></i>Code
+                                <i className='fa fa-code'></i>Legacyier
                             </div>
                             <div
                                 onClick={() => changeTab(2)}
                                 className={tab === 2 ? 'active' : ''}
                             >
-                                <i className='fa fa-pencil'></i>About
+                                <i className='fa fa-pencil'></i>Bliss DDM
                             </div>
                             <div
                                 onClick={() => changeTab(3)}
                                 className={tab === 3 ? 'active' : ''}
                             >
-                                <i className='fa fa-chart'></i>Services
+                                <i className='fa fa-chart'></i>UAEH
                             </div>
                             <div
                                 onClick={() => changeTab(4)}
                                 className={tab === 4 ? 'active' : ''}
                             >
-                                <i className='fa fa-envelope'></i>Contact
+                                <i className='fa fa-envelope'></i>SQDesarrollo & Holcim Mexico
+                            </div>
+                            <div
+                                onClick={() => changeTab(5)}
+                                className={tab === 5 ? 'active' : ''}
+                            >
+                                <i className='fa fa-envelope'></i>SQDesarrollo & Bonafont
                             </div>
                         </div>
                         <div className="tab-indicator">
