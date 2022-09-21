@@ -14,8 +14,6 @@ const App = () => {
     });
     
     const animation = useAnimation();
-    const animationInformation = useAnimation();
-
 
     useEffect(() => {
         if (inView) {
@@ -24,12 +22,6 @@ const App = () => {
                 boxShadow: '0px 0px 20px 10px #011326',
                 transition: {
                     type: 'spring', duration: 1, bounce: 0
-                },
-            });
-            animationInformation.start({
-                color: '#011326',
-                transition: {
-                    type: 'spring', duration: .1, bounce: 0
                 },
             });
         }
@@ -41,19 +33,12 @@ const App = () => {
                     type: 'spring', duration: 1, bounce: 0
                 }, 
             });
-            animationInformation.start({
-                position: 'fixed',
-                color: '#A4A4A4',
-                transition: {
-                    type: 'spring', duration: .1, bounce: 0
-                },
-            });
         }
     },[inView]);
 
     return ( 
         <div className='w-full'>
-            <Information animationInfo={animationInformation}/>
+            <Information />
             <Menu animation={animation}/>
             <Home/>
             <div ref={ref}>

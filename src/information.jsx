@@ -20,7 +20,7 @@ const Section = styled.div`
 }
 `
 
-const Information = ({ animationInfo }) => {
+const Information = () => {
 
     const { ref, inView } = useInView({
         threshold: 1,
@@ -48,7 +48,7 @@ const Information = ({ animationInfo }) => {
 
     return ( 
         <>
-            <motion.div ref={ref} animate={animationInfo}>
+            <motion.div ref={ref}>
                 <motion.div
                     animate={animation}
                     className='opacity-0 delay-0'
@@ -66,7 +66,7 @@ const Information = ({ animationInfo }) => {
                                 <SiTwitter 
                                     className='h-5 w-5 -rotate-90 transition 
                                     ease-in-out hover:-translate-x-1 hover:text-Color-Text-H3 
-                                    duration-200'
+                                    duration-200 text-icon-color'
                                 />
                             </a>
                             <a 
@@ -77,7 +77,7 @@ const Information = ({ animationInfo }) => {
                                 <SiInstagram 
                                     className='h-5 w-5 -rotate-90 transition 
                                     ease-in-out hover:-translate-x-1 hover:text-Color-Text-H3 
-                                    duration-200'
+                                    duration-200 text-icon-color'
                                 />
                             </a>
                             <a 
@@ -88,7 +88,7 @@ const Information = ({ animationInfo }) => {
                                 <FiGithub 
                                     className='h-5 w-5 -rotate-90 transition 
                                     ease-in-out hover:-translate-x-1 hover:text-Color-Text-H3 
-                                    duration-200'
+                                    duration-200 text-icon-color'
                                 />
                             </a>
                             <a 
@@ -99,7 +99,7 @@ const Information = ({ animationInfo }) => {
                                 <FaLinkedinIn 
                                     className='h-5 w-5 -rotate-90 transition 
                                     ease-in-out hover:-translate-x-1 hover:text-Color-Text-H3 
-                                    duration-200'
+                                    duration-200 text-icon-color'
                                 />
                             </a>
                             <a 
@@ -110,7 +110,7 @@ const Information = ({ animationInfo }) => {
                                 <FaCodepen 
                                     className='h-5 w-5 -rotate-90 transition 
                                     ease-in-out hover:-translate-x-1 hover:text-Color-Text-H3 
-                                    duration-200'
+                                    duration-200 text-icon-color'
                                 />
                             </a>
                         </div>
@@ -123,9 +123,9 @@ const Information = ({ animationInfo }) => {
                         right-0 top-1/2 z-50 left-auto invisible sm:visible"
                     >
                         <div 
-                            className='font-roboto text-sm transition
+                            className='font-roboto text-xs transition
                                     ease-in-out hover:-translate-x-1 hover:text-Color-Text-H3 
-                                    duration-200 '
+                                    duration-200 text-icon-color tracking-widest'
                         >
                             <a href="mailto:hi.legacyier@gmail.com">
                                 hi.legacyier@gmail.com

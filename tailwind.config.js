@@ -7,6 +7,9 @@ module.exports = {
     fontFamily: {
       'roboto': ['Roboto', 'sans-serif'],
     },
+    letterSpacing: {
+      widest: '.25em',
+    },
     extend: {
       colors: {
         'Background': '#011326',
