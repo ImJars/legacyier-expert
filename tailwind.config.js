@@ -18,7 +18,7 @@ module.exports = {
         'icon-color': '#A4A4A4',
       },
       minHeight: {
-        750: '46.875rem', //750px
+        750: '40rem',
       },
       maxWidth: {
         240: '60rem', //960px

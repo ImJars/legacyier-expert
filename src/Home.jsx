@@ -84,7 +84,7 @@ const Home = () => {
                             >
                                 I build things for the web.
                             </motion.h2>
-                            <motion.h3 className='text-Color-Text-H4 pt-5 font-roboto opacity-0'
+                            <motion.h3 className='text-white pt-5 font-roboto opacity-0'
                                 animate={animationText}
                             >
                                 I'm a software developer specializing in creating exceptional<br/> 
