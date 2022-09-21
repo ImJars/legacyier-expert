@@ -1,142 +1,242 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import TabContent from './components/tabContentExp';
 
 const Tablas = styled.div`
-    .bloc-tabs {
-        display: flex;
-    }
+    display: flex;
+    justify-content: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+
+@media screen and (max-width: 768px) {
+    overflow: hidden;
+}
+
     .tabs {
-        padding: 15px;
-        text-align: center;
-        width: 50%;
-        background: rgba(128, 128, 128, 0.075);
-        cursor: pointer;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.274);
-        box-sizing: content-box;
         position: relative;
-        outline: none;
+        width: 1000px;
+        height: 460px;
+        padding: 30px 20px;
+        overflow: hidden;
+        .tab-header{
+            float: left;
+            width: 125px;
+            height: 100%;
+            border-right: 1px solid #bfa6ff;
         }
-    .tabs:not(:last-child){
-        border-right: 1px solid rgba(0, 0, 0, 0.274);
-    }
-
-    .active-tabs  {
-        background: white;
-        border-bottom: 1px solid transparent;
-    }
-
-    .active-tabs::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: -5px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: calc(100% + 2px);
-        height: 5px;
-        background: rgb(88, 147, 241);
-    }
-
-
-
-    button {
-        border: none;
-
-    }
-    .content-tabs {
-        flex-grow : 1;
-    }
-    .content {
-        background: white;
-        padding: 20px;
-        width: 100%;
-        height: 100%;
-        display: none;
-    }
-    .content h2 {
-        padding: 0px 0 5px 0px;
-    }
-    .content hr {
-        width: 100px;
-        height: 2px;
-        background: #222;
-        margin-bottom: 5px;
-    }
-    .content p {
-        width: 100%;
-        height: 100%;
-    }
-    .active-content {
-        display: block;
-        transition: all 0.5s ease-in-out;
+        .tab-header > div {
+            margin-bottom: 15px;
+            height: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #888;
+            cursor: pointer;
+            padding-left: 0px;
+        }
+        .tab-header > div:hover,
+        .tab-header > div.active {
+            transition: all 500ms ease-in-out;
+            color: #8150FF;
+        }
+        .tab-header > div i{
+            display: inline-block;
+        }
+        .tab-content{
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+            visibility: hidden;
+        }
+        .tab-content > div {
+            position: absolute;
+            text-align: center;
+            padding:0px 0px 0px 10px;
+            opacity: 0;
+            text-align: start;
+            transition: all 600ms ease-in-out;
+        }
+        .tab-content > div.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .tab-indicator {
+            position: absolute;
+            width: 4px;
+            height: 50px;
+            background: #8150FF;
+            left: 143px;
+            top: 30px;
+            border-radius: 10px 10px 10px 10px;
+            transition: all 500ms ease-in-out;
+        }
     }
 `
-
-const Experience = () => {
-    const [toggleState, setToggleState] = useState(1);
-    const toggleTab = (index) => {
-        setToggleState(index);
+const Experienc = () => {
+    const [tab, setTab] = useState(1);
+    function changeTab(index) {
+        setTab(index);
+        if ( index === 1 ) {
+            document.querySelector('.tab-indicator').style.top = '20px';
+        } else if ( index === 2 ) {
+            document.querySelector('.tab-indicator').style.top = '85px';
+        } else if ( index === 3 ) {
+            document.querySelector('.tab-indicator').style.top = '150px';
+        } else if ( index === 4 ) {
+            document.querySelector('.tab-indicator').style.top = '225px';
+        } else if ( index === 5 ) {
+            document.querySelector('.tab-indicator').style.top = '290px';
+        }
+        console.log(index);
     }
     return ( 
         <>
-            <Tablas className='w-full h-screen'>
-                <div className="container">
-                    <div className="bloc-tabs">
-                        <div
-                            className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
-                            onClick={() => toggleTab(1)}
-                        >
-                            Legacyier
+            <div className='w-full h-screen grid content-center 
+                            justify-center'
+            >
+                <h1
+                    className='text-center text-4xl font-roboto font-bold 
+                    text-gray-800 mb-5 mt-40 sm:mt-0'
+                >
+                    Where I’ve&nbsp;
+                    <font
+                        className="text-transparent bg-clip-text bg-gradient-to-r
+                                from-Color-Text-H3 via-Color-Text-H1 to-Color-Text-H2
+                                font-roboto font-bold"
+                    >
+                        Worked
+                    </font>
+                </h1>
+                <Tablas>
+                    <div className="tabs">
+                        <div className="tab-header">
+                            <div
+                                onClick={() => changeTab(1)}
+                                className={tab === 1 ? 'active' : ''}
+                            >
+                                <i className='fa fa-code'></i>Legacyier
+                            </div>
+                            <div
+                                onClick={() => changeTab(2)}
+                                className={tab === 2 ? 'active' : ''}
+                            >
+                                <i className='fa fa-pencil'></i>Bliss DDM
+                            </div>
+                            <div
+                                onClick={() => changeTab(3)}
+                                className={tab === 3 ? 'active' : ''}
+                            >
+                                <i className='fa fa-chart'></i>UAEH
+                            </div>
+                            <div
+                                onClick={() => changeTab(4)}
+                                className={tab === 4 ? 'active' : ''}
+                            >
+                                <i className='fa fa-envelope'></i>SQDesarrollo & Holcim Mexico
+                            </div>
+                            <div
+                                onClick={() => changeTab(5)}
+                                className={tab === 5 ? 'active' : ''}
+                            >
+                                <i className='fa fa-envelope'></i>SQDesarrollo & Bonafont
+                            </div>
                         </div>
-                        <div 
-                            className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
-                            onClick={() => toggleTab(2)}
-                        >
-                            Bliss DDM
+                        <div className="tab-indicator">
+
                         </div>
-                        <div 
-                            className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
-                            onClick={() => toggleTab(3)}
-                        >
-                            UAEH
+                        <div className="tab-content">
+                            <div className={tab === 1 ? 'active': ''}>
+                                <TabContent
+                                    url={'https://www.instagram.com/legacyier_official/'}
+                                    title={'Legacyier'}
+                                    work={'Chief Executive Officer'}
+                                    date={'Jan 2022 - Present'}
+                                    contentOne={
+                                        'I am the creator and administrator of the Legacyier name, my mission is to leave a mark where customers look for ease and an excellent experience when using one of our developments, so that new businesses can implement new technologies in a safe, simple and efficient way.'
+                                    }
+                                    contentTwo={
+                                        'Legacyier is a startup dedicated to innovation and web creation, mainly focused on the world of technology. We are currently working on the implementation of web3 and blockchain, working for SMEs so that they are not left out of this great technology.'
+                                    }
+                                    contentThree={
+                                        'Direct communication with clients/companies to understand their needs and be able to offer them the best possible solution, as well as the creation of new products and services.'
+                                    }
+                                />
+                            </div>
+                            <div className={tab === 2 ? 'active': ''}>
+                                <TabContent
+                                    url={'https://blissddm.xyz/es/'}
+                                    title={'Bliss DDM'}
+                                    work={'Web developer'}
+                                    date={'Jan 2021 - Dec 2021'}
+                                    contentOne={
+                                        'I wrote modern and clean code, participated with the design and programming that is intuitive for the user, attractive for potential clients.'
+                                    }
+                                    contentTwo={
+                                        'Work with a variety of technologies and platforms like JavaScript, React, Gatsby, NodeJS, Netlify, and Github.'
+                                    }
+                                    contentThree={
+                                        'Communication with the staff in charge, satisfying all the requirements and at the same time learning new skills, giving progress reports on web development and working as a team.'
+                                    }
+                                />
+                            </div>
+                            <div className={tab === 3 ? 'active': ''}>
+                                <TabContent
+                                    url={'https://www.uaeh.edu.mx/'}
+                                    title={'UAEH'}
+                                    work={'Design and programming'}
+                                    date={'Jan 2020 - Dec 2020'}
+                                    contentOne={
+                                        'I designed and wrote modern code in the development of a software project on version control, using the best programming practices.'
+                                    }
+                                    contentTwo={
+                                        'Work with a variety of technologies and platforms like .Net and MySQL.'
+                                    }
+                                    contentThree={
+                                        'I had a presentation of the project before the staff in charge, giving reports of the progress in the development and working as a team.'
+                                    }
+                                />
+                            </div>
+                            <div className={tab === 4 ? 'active': ''}>
+                                <TabContent
+                                    url={'https://sqdesarrollo.com.mx/'}
+                                    title={'SQDesarrollo & Holcim Mexico'}
+                                    work={'Design and programming'}
+                                    date={'Jan 2019 - Dec 2019'}
+                                    contentOne={
+                                        'I designed, wrote and analyzed data in the development of a software project on a labor cost simulator in the projects of the Holcim Mexico company, using the best programming and data analysis practices.'
+                                    }
+                                    contentTwo={
+                                        'Work with .NET and SQL Server technologies giving priority to the development and solution of the data import problem.'
+                                    }
+                                    contentThree={
+                                        'I had a presentation of the project before the staff in charge, giving reports of the progress in the development and working as a team.'
+                                    }
+                                />
+                            </div>
+                            <div className={tab === 5 ? 'active': ''}>
+                                <TabContent
+                                    url={'https://sqdesarrollo.com.mx/'}
+                                    title={'SQDesarrollo & Bonafont'}
+                                    work={'Design and programming'}
+                                    date={'Jan 2018 - Dec 2018'}
+                                    contentOne={
+                                        'Design, write and analyze data in the development of a software project on data management, analysis and calculation for the company Bonafont, using the best practices of design, programming and data analysis.'
+                                    }
+                                    contentTwo={
+                                        'Work with the technology of Visual Basic, Excel and SQL Server giving priority to the development and detailed analysis of data.'
+                                    }
+                                    contentThree={
+                                        'I had a presentation of the project before the staff in charge, giving reports of the progress in the development and working as a team.'
+                                    }
+                                />
+                            </div>
                         </div>
                     </div>
-                    <div className="content-tabs">
-                        <div className={toggleState === 1 ? 'content active-content opacity-100 transition duration-500' : 'content opacity-0 transition duration-500'}>
-                            <h1>Legacyier</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur 
-                                adipisicing elit. Deserunt architecto quas 
-                                ullam id enim possimus accusamus quidem 
-                                exercitationem perspiciatis quos error quia 
-                                aut, nobis sequi quod. Iure ullam ex dolores!
-                            </p>
-                        </div>
-                        <div className={toggleState === 2 ? 'content active-content opacity-100 transition duration-500' : 'content opacity-0 transition duration-500'}>
-                            <h1>Bliss DDM</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur 
-                                adipisicing elit. Deserunt architecto quas 
-                                ullam id enim possimus accusamus quidem 
-                                exercitationem perspiciatis quos error quia 
-                                aut, nobis sequi quod. Iure ullam ex dolores!
-                            </p>
-                        </div>
-                        <div className={toggleState === 3 ? 'content active-content opacity-100 transition duration-500' : 'content opacity-0 transition duration-500'}>
-                            <h1>UAEH</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur 
-                                adipisicing elit. Deserunt architecto quas 
-                                ullam id enim possimus accusamus quidem 
-                                exercitationem perspiciatis quos error quia 
-                                aut, nobis sequi quod. Iure ullam ex dolores!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </Tablas>
+                </Tablas>
+            </div>
         </>
      );
 }
  
-export default Experience;
+export default Experienc;

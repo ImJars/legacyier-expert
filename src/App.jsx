@@ -5,7 +5,7 @@ import { useAnimation  } from 'framer-motion';
 import Home from './Home';
 import Information from './information';
 import About from './about';
-import Experienc from './Experienc';
+import Experience from './Experience';
 // import Work from './Work';
 
 const App = () => {
@@ -58,7 +58,7 @@ const App = () => {
             <Home/>
             <div ref={ref}>
                 <About/>
-                <Experienc/>
+                <Experience/>
                 {/* <Work/> */}
             </div>
         </div>

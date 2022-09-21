@@ -1,13 +1,16 @@
 import React from 'react'
 
-const TabContent = ({ title, work, date, content }) => {
+const TabContent = ({ url, title, work, date, contentOne, contentTwo, contentThree }) => {
     return ( 
         <>
-            <h1
+            <a
                 className='text-3xl font-bold text-black'
+                href={ url }
+                target='_blank'
+                rel='noopener noreferrer'
             >
                 { title }
-            </h1>
+            </a>
             <h2
                 className='text-xl font-bold text-Color-Text-H1'
             >
@@ -18,11 +21,30 @@ const TabContent = ({ title, work, date, content }) => {
             >
                 { date }
             </h3>
-            <p
-                className='text-base font-roboto mt-4'
-            >
-                { content }
-            </p>
+            <h1>
+                <font className='flex font-roboto text-Color-Text-H3'>
+                    &#x25B8;&nbsp;
+                    <p className='text-black'>
+                        { contentOne }
+                    </p>
+                </font>
+            </h1>
+            <h1>
+                <font className='flex font-roboto text-Color-Text-H3'>
+                    &#x25B8;&nbsp;
+                    <p className='text-black'>
+                        { contentTwo }
+                    </p>
+                </font>
+            </h1>
+            <h1>
+                <font className='flex font-roboto text-Color-Text-H3'>
+                    &#x25B8;&nbsp;
+                    <p className='text-black'>
+                        { contentThree }
+                    </p>
+                </font>
+            </h1>
         </>
      );
 }
