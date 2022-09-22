@@ -6,9 +6,8 @@ import { useInView } from 'react-intersection-observer';
 const About = () => {
 
     const { ref, inView } = useInView({
-        threshold: 0.1,
+        threshold: 0.5,
         triggerOnce: true,
-        delay: 1000
     })
     const animationTitle = useAnimation();
     const animationText = useAnimation();
@@ -17,29 +16,29 @@ const About = () => {
         if (inView) {
             animationTitle.start({
                 opacity: 1,
-                x: 0,
+                y: 0,
                 transition: {
                     type: 'spring', duration: 2, delay: .02
                 }
             });
             animationText.start({
                 opacity: 1,
-                x: 0,
+                y: 0,
                 transition: {
-                    type: 'spring', duration: 2, delay: .04
+                    type: 'spring', duration: 2, delay: .06
                 }
             });
         }
         if (!inView) {
             animationTitle.start({
                 opacity: 0,
-                x: '5vw',
+                y: '5vw',
             });
         }
         if (!inView) {
             animationText.start({
                 opacity: 0,
-                x: '5vw',
+                y: '5vw',
             });
         }
     },[inView]);
@@ -47,7 +46,7 @@ const About = () => {
     return ( 
         <>
             <div id='About' ref={ref} className='w-full flex justify-center bg-Background text-white'>
-                <div className="min-h-750 max-w-240 grid content-center mx-10 sm:mx-0 my-32 sm:my-0">
+                <div className="max-w-240 grid content-center mx-10 my-10">
                     <motion.h1 
                         animate={ animationTitle }
                         className='opacity-0 text-center text-4xl font-roboto font-bold mb-10'

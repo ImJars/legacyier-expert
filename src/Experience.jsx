@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import TabContent from './components/tabContentExp';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const Tablas = styled.div`
     display: flex;
@@ -89,13 +91,53 @@ const Experienc = () => {
         }
         console.log(index);
     }
+
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+        triggerOnce: true,
+    })
+    const animationTitle = useAnimation();
+    const animationContent = useAnimation();
+
+    useEffect(() => {
+        if (inView) {
+            animationTitle.start({
+                opacity: 1,
+                y: 0,
+                transition: {
+                    type: 'spring', duration: 2, delay: .02
+                }
+            });
+            animationContent.start({
+                opacity: 1,
+                y: 0,
+                transition: {
+                    type: 'spring', duration: 2, delay: .06
+                }
+            });
+        }
+        if (!inView) {
+            animationTitle.start({
+                opacity: 0,
+                y: '5vw',
+            });
+        }
+        if (!inView) {
+            animationContent.start({
+                opacity: 0,
+                y: '5vw',
+            });
+        }
+    }, [inView])
+    
     return ( 
         <>
-            <div className='w-full flex justify-center bg-Background text-white'
+            <div ref={ ref } className='w-full flex justify-center bg-Background text-white'
             >
-                <div className='min-h-750 max-w-240 grid content-center my-32 sm:my-0'>
-                    <h1
-                        className='text-center text-4xl font-roboto font-bold 
+                <div className='max-w-240 grid content-center my-32'>
+                    <motion.h1
+                        animate={ animationTitle }
+                        className='opacity-0 text-center text-4xl font-roboto font-bold 
                                     mb-5 mt-40 sm:mt-0'
                     >
                         Where I’ve&nbsp;
@@ -106,9 +148,9 @@ const Experienc = () => {
                         >
                             Worked
                         </font>
-                    </h1>
+                    </motion.h1>
                     <Tablas>
-                        <div className="tabs">
+                        <motion.div animate={ animationContent } className="tabs opacity-0">
                             <div className="tab-header">
                                 <div
                                     onClick={() => changeTab(1)}
@@ -231,7 +273,7 @@ const Experienc = () => {
                                     />
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     </Tablas>
                 </div>
             </div>
