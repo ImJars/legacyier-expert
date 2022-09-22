@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'roboto': ['Roboto', 'sans-serif'],
+      'open-sans': ['Open Sans', 'sans-serif'],
     },
     letterSpacing: {
       widest: '.25em',
