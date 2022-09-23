@@ -19,7 +19,7 @@ const Tablas = styled.div`
     .tabs {
         position: relative;
         width: 770px;
-        height: 460px;
+        height: 600px;
         padding: 30px 20px;
         overflow: hidden;
         .tab-header{
@@ -61,6 +61,7 @@ const Tablas = styled.div`
         .tab-content > div.active {
             opacity: 1;
             visibility: visible;
+            overflow-y: auto;
         }
         .tab-indicator {
             position: absolute;
@@ -134,23 +135,23 @@ const Experienc = () => {
         <>
             <div ref={ ref } className='w-full flex justify-center bg-Background text-white'
             >
-                <div className='max-w-240 grid content-center my-32'>
+                <div className='max-w-240 grid content-center my-32 sm:mx-20 '>
                     <motion.h1
                         animate={ animationTitle }
-                        className='opacity-0 text-center text-4xl font-roboto font-bold 
+                        className='opacity-0 text-center text-4xl font-open-sans font-bold 
                                     mb-5 mt-40 sm:mt-0'
                     >
                         Where I’ve&nbsp;
                         <font
                             className="text-transparent bg-clip-text bg-gradient-to-r
                                     from-Color-Text-H3 via-Color-Text-H1 to-Color-Text-H2
-                                    font-roboto font-bold"
+                                    font-open-sans font-bold"
                         >
                             Worked
                         </font>
                     </motion.h1>
                     <Tablas>
-                        <motion.div animate={ animationContent } className="tabs opacity-0">
+                        <motion.div animate={ animationContent } className="tabs opacity-0 font-open-sans">
                             <div className="tab-header">
                                 <div
                                     onClick={() => changeTab(1)}

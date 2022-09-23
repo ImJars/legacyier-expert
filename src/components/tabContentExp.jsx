@@ -4,7 +4,7 @@ const TabContent = ({ url, title, work, date, contentOne, contentTwo, contentThr
     return ( 
         <>
             <a
-                className='text-3xl font-bold text-white font-roboto'
+                className='text-3xl font-bold text-white font-open-sans'
                 href={ url }
                 target='_blank'
                 rel='noopener noreferrer'
@@ -17,12 +17,12 @@ const TabContent = ({ url, title, work, date, contentOne, contentTwo, contentThr
                 { work }
             </h2>
             <h3
-                className='text-xs font-bold text-Color-Text-H3'
+                className='text-xs font-bold text-Color-Text-H3 my-2'
             >
                 { date }
             </h3>
             <h1>
-                <font className='flex font-roboto text-Color-Text-H3'>
+                <font className='flex text-Color-Text-H3 text-sm font-open-sans'>
                     &#x25B8;&nbsp;
                     <p className='text-white'>
                         { contentOne }
@@ -30,7 +30,7 @@ const TabContent = ({ url, title, work, date, contentOne, contentTwo, contentThr
                 </font>
             </h1>
             <h1>
-                <font className='flex font-roboto text-Color-Text-H3'>
+                <font className='flex text-Color-Text-H3 text-sm font-open-sans mt-2'>
                     &#x25B8;&nbsp;
                     <p className='text-white'>
                         { contentTwo }
@@ -38,7 +38,7 @@ const TabContent = ({ url, title, work, date, contentOne, contentTwo, contentThr
                 </font>
             </h1>
             <h1>
-                <font className='flex font-roboto text-Color-Text-H3'>
+                <font className='flex text-Color-Text-H3 text-sm font-open-sans mt-2'>
                     &#x25B8;&nbsp;
                     <p className='text-white'>
                         { contentThree }
