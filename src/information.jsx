@@ -123,7 +123,7 @@ const Information = () => {
                         right-0 top-1/2 z-50 left-auto invisible sm:visible"
                     >
                         <div 
-                            className='font-roboto text-xs transition
+                            className='font-open-sans text-xs transition
                                     ease-in-out hover:-translate-x-1 hover:text-Color-Text-H3 
                                     duration-200 text-icon-color tracking-widest'
                         >
