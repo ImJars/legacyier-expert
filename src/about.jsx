@@ -43,25 +43,27 @@ const About = () => {
         }
     },[inView]);
 
+
     return ( 
         <>
             <div id='About' ref={ref} className='w-full flex justify-center bg-Background text-white'>
                 <div className="max-w-240 grid content-center mx-10 my-10">
                     <motion.h1 
                         animate={ animationTitle }
-                        className='opacity-0 text-center text-4xl font-roboto font-bold mb-10'
+                        className='opacity-0 text-center text-4xl font-open-sans 
+                                    font-bold mb-10'
                     >
                         About&nbsp; 
                         <font className="text-transparent bg-clip-text bg-gradient-to-r
                                             from-Color-Text-H3 via-Color-Text-H1 to-Color-Text-H2
-                                            font-roboto font-bold text-4xl"
+                                            font-bold font-open-sans text-4xl"
                         >
                             Me
                         </font>
                     </motion.h1>
                     <motion.div
                         animate={ animationText }
-                        className='opacity-0 font-roboto text-Color-Text-H4'
+                        className='opacity-0 font-open-sans text-Color-Text-H4'
                     >
                         <h1 className='text-center mb-5'>
                            <font className="font-bold">Hello!</font> My name is <font className="font-bold">Ángel</font> and I like technology, I enjoy 
