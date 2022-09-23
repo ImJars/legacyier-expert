@@ -5,9 +5,9 @@ const RotatingText = () => {
     return (
         <>
             <div className='flex text-xs mt-5'>
-                <h1 className='font-roboto text-Color-Text-H4'>&#62; &nbsp;</h1>
+                <h1 className='font-open-sans text-Color-Text-H4'>&nbsp; &#60;&nbsp;</h1>
                 <ReactRotatingText 
-                    className='font-roboto'
+                    className='font-open-sans'
                     color='#E6E7E9'
                     items={[` I'm Software developer 💻`,
                     ` UX / UI developer 👨‍💻`,
@@ -15,6 +15,8 @@ const RotatingText = () => {
                     ` Cryptocurrency investor ₿ 🪙`,
                     ` Competitive gamer 🏆`,
                 ]}/>
+                <h1 className='font-open-sans text-Color-Text-H4'>&#47;&#62;</h1>
+
             </div>
         </>
      );

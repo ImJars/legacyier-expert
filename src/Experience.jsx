@@ -18,7 +18,7 @@ const Tablas = styled.div`
 
     .tabs {
         position: relative;
-        width: 1000px;
+        width: 770px;
         height: 460px;
         padding: 30px 20px;
         overflow: hidden;

@@ -9,7 +9,9 @@ module.exports = {
       'open-sans': ['Open Sans', 'sans-serif'],
     },
     letterSpacing: {
+      wider: '.1em',
       widest: '.25em',
+
     },
     extend: {
       colors: {
@@ -25,7 +27,8 @@ module.exports = {
         750: '50rem',
       },
       maxWidth: {
-        240: '60rem', //960px
+        240: '60rem',
+        200: '80rem', //960px
       },
       translate: {
         '1/5': '44%',

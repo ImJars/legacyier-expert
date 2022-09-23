@@ -61,35 +61,39 @@ const Home = () => {
             <div className='h-screen grid content-center'>
                 <div>
                     <div 
-                    className='flex justify-center'
+                    className=' max-w-200 flex justify-center'
                     >
                         <div className=''>
-                            <motion.h1 className='text-white font-roboto font-bold text-4xl sm:text-8xl
-                                                opacity-0'
+                            <motion.h1 className='opacity-0 grid '
                                 animate={animation}
                             >
-                                    Hello, I'm&nbsp; 
+                                <font
+                                    className='text-Color-Text-H3 font-open-sans font-semibold text-base
+                                                tracking-wider mb-4'
+                                >
+                                    Hello!, my name is&nbsp; 
+                                </font>
                                 <font
                                     className='text-transparent bg-clip-text bg-gradient-to-r
                                         from-Color-Text-H3 via-Color-Text-H1 to-Color-Text-H2
-                                        font-roboto font-bold text-4xl sm:text-8xl'
+                                        font-open-sans font-bold text-6xl sm:text-7xl pb-4'
                                 >
                                     Angel Ramirez
                                 </font>
 
                             </motion.h1>
-                            <motion.h2 className='text-Color-Text-H1 font-roboto font-light text-3xl
-                                                sm:text-6xl opacity-0'
+                            <motion.h2 className='text-Color-Text-H1 font-open-sans font-semibold text-4xl
+                                                sm:text-5xl opacity-0 pb-4'
                                 animate={animationSubtitle}
                             >
                                 I build things for the web.
                             </motion.h2>
-                            <motion.h3 className='text-white pt-5 font-roboto opacity-0'
+                            <motion.h3 className='text-white pt-5 font-open-sans opacity-0'
                                 animate={animationText}
                             >
-                                I'm a software developer specializing in creating exceptional<br/> 
-                                products and digital experiences. I am currently focused on<br/> 
-                                creating <font className='text-Color-Text-H3'>Web3</font> technology products.
+                                I'm a software developer specializing in creating exceptional 
+                                products <br/>and digital experiences. I am currently focused on 
+                                creating <font className='text-Color-Text-H3'>Web3</font> <br/>technology products.
                                 <RotatingText/>
                             </motion.h3>
                         </div>
