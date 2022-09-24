@@ -8,49 +8,10 @@ justify-content: center;
         padding: 0.0em 0.8em;
         margin: 0.2em 0;
         display: inline-block;
-        color: #E6E7E9;
         position: relative;
         margin-left: 5%;
         letter-spacing: .1rem;
     }
-    a:before,
-    a:after {
-        height: 14px;
-        width: 14px;
-        position: absolute;
-        content: "";
-        -webkit-transition: all 0.35s ease;
-        transition: all 0.35s ease;
-        opacity: 0;
-    }
-    a:before {
-        left: 0;
-        top: -30%;
-        border-left: 3px solid #8150FF;
-        border-top: 3px solid #8150FF;
-        -webkit-transform: translate(100%, 50%);
-        transform: translate(100%, 50%);
-        }
-    a:after {
-        right: 0;
-        bottom: -30%;
-        border-right: 3px solid #8150FF;
-        border-bottom: 3px solid #8150FF;
-        -webkit-transform: translate(-100%, -50%);
-        transform: translate(-100%, -50%);
-    }
-    a:hover {
-        -webkit-transition: all 0.35s ease;
-        transition: all 0.35s ease;
-        color: #8150FF;
-    }
-    a:hover:before,
-    a:hover:after{
-        -webkit-transform: translate(0%, 0%);
-        transform: translate(0%, 0%);
-        opacity: 1;
-    }
-
     
 `
 
@@ -61,7 +22,9 @@ const LinkHeader = ({ textLink, link, classNames }) => {
             <Link>
                 <a
                     href={ link }
-                    className={`${classNames} link4 font-roboto font-bold items-center`}
+                    className={`${classNames} text-icon-color font-open-sans text-base 
+                                font-medium items-center hover:text-Color-Text-H3
+                                transition duration-500 ease-in-out hover:-translate-y-1`}
                 >
                     { textLink }
                 </a>
