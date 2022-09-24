@@ -40,6 +40,9 @@ module.exports = {
         '0': '0ms',
         '5': '5ms',
       },
+      boxShadow: {
+        'xl': '0px 0px 20px 10px #011326',
+      },
     },
   },
   plugins: [],

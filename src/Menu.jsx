@@ -4,7 +4,7 @@ import Link from './components/LinkHeader';
 import { motion, useAnimation  } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const Menu = ({ animation }) => {
+const Menu = () => {
     const { ref, inView } = useInView({
         threshold: 0,
         triggerOnce: true,
@@ -81,9 +81,7 @@ const Menu = ({ animation }) => {
     },[inView]);
     return ( 
         <>
-            <motion.div ref={ref} className='bg-Background w-full fixed z-10'
-                animate={ animation }
-            >
+            <div ref={ref} className='bg-Background w-full fixed z-10 shadow-xl'>
                 <div className='flex justify-between'>
                     <div className='sm:invisible visible'>
                         <Header />
@@ -139,7 +137,7 @@ const Menu = ({ animation }) => {
                         </motion.div>
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </>
      );
 }
