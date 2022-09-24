@@ -16,6 +16,7 @@ const Menu = () => {
     const animationExperience = useAnimation();
     const animationWork = useAnimation();
     const animationContact = useAnimation();
+    const animationHamburger = useAnimation();
 
 
     useEffect(() => {
@@ -55,6 +56,12 @@ const Menu = () => {
                     type: 'spring', duration: 1, delay: 1.4
                 }
             });
+            animationHamburger.start({
+                opacity: 1,
+                transition: {
+                    type: 'spring', duration: 2, delay: 1
+                }
+            });
         }
         if (!inView) {
             animationHome.start({
@@ -77,15 +84,18 @@ const Menu = () => {
                 opacity: 0,
                 y: '-5vh',
             });
+            animationHamburger.start({
+                opacity: 0,
+            });
         }
     },[inView]);
     return ( 
         <>
             <div ref={ref} className='bg-Background w-full fixed z-10 shadow-xl'>
                 <div className='flex justify-between'>
-                    <div className='sm:invisible visible'>
+                    <motion.div animate={ animationHamburger } className='opacity-0 sm:invisible visible'>
                         <Header />
-                    </div>
+                    </motion.div>
                     <div
                         className='invisible sm:visible h-20 text-white grid grid-cols-5 
                                 content-center mr-20'

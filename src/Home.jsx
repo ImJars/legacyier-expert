@@ -58,7 +58,7 @@ const Home = () => {
     return ( 
         <>
         <div id='Home' ref={ref} className='w-full h-screen bg-Background z-0'>
-            <div className='h-screen grid content-center'>
+            <div className='h-screen grid content-center mx-5 sm:mx-0'>
                 <div>
                     <div 
                     className=' max-w-200 flex justify-center'
@@ -76,24 +76,24 @@ const Home = () => {
                                 <font
                                     className='text-transparent bg-clip-text bg-gradient-to-r
                                         from-Color-Text-H3 via-Color-Text-H1 to-Color-Text-H2
-                                        font-open-sans font-bold text-6xl sm:text-7xl pb-4'
+                                        font-open-sans font-bold text-5xl sm:text-7xl pb-4'
                                 >
                                     Angel Ramirez
                                 </font>
 
                             </motion.h1>
-                            <motion.h2 className='text-Color-Text-H1 font-open-sans font-semibold text-4xl
+                            <motion.h2 className='text-Color-Text-H1 font-open-sans font-semibold text-3xl
                                                 sm:text-5xl opacity-0 pb-4'
                                 animate={animationSubtitle}
                             >
                                 I build things for the web.
                             </motion.h2>
-                            <motion.h3 className='text-white pt-5 font-open-sans opacity-0'
+                            <motion.h3 className='text-white pt-5 font-open-sans opacity-0 max-w-150'
                                 animate={animationText}
                             >
                                 I'm a software developer specializing in creating exceptional 
-                                products <br/>and digital experiences. I am currently focused on 
-                                creating <font className='text-Color-Text-H3'>Web3</font> <br/>technology products.
+                                products and digital experiences. I am currently focused on 
+                                creating <font className='text-Color-Text-H3'>Web3</font> technology products.
                                 <RotatingText/>
                             </motion.h3>
                         </div>
