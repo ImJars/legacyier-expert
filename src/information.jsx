@@ -44,7 +44,7 @@ const Information = () => {
                 opacity: 0,
             });
         }
-    },[inView]);
+    },[inView, animation]);
 
     return ( 
         <>

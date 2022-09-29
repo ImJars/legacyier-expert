@@ -41,7 +41,7 @@ const About = () => {
                 y: '5vw',
             });
         }
-    },[inView]);
+    },[inView, animationTitle, animationText]);
 
 
     return ( 

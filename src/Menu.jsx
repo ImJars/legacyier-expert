@@ -88,7 +88,7 @@ const Menu = () => {
                 opacity: 0,
             });
         }
-    },[inView]);
+    },[inView, animationHome, animationAbout, animationExperience, animationWork, animationContact, animationHamburger]);
     return ( 
         <>
             <div ref={ref} className='bg-Background w-full fixed z-10 shadow-xl'>

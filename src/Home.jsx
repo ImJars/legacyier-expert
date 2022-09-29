@@ -53,7 +53,7 @@ const Home = () => {
                 opacity: 0,
             });
         }
-    },[inView]);
+    },[inView, animation, animationSubtitle, animationText]);
 
     return ( 
         <>

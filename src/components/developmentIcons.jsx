@@ -111,7 +111,7 @@ const DevelopmentIcons = () => {
                 opacity: 0,
             });
         }
-    },[inView]);
+    },[inView, animationIcon1, animationIcon2, animationIcon3, animationIcon4, animationIcon5, animationIcon6, animationIcon7, animationIcon8]);
     return ( 
         <>
             <div ref={ref} className='grid grid-cols-4 sm:grid-cols-8'>

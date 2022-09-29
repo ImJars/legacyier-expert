@@ -90,7 +90,6 @@ const Experienc = () => {
         } else if ( index === 5 ) {
             document.querySelector('.tab-indicator').style.top = '290px';
         }
-        console.log(index);
     }
 
     const { ref, inView } = useInView({
@@ -129,7 +128,7 @@ const Experienc = () => {
                 y: '5vw',
             });
         }
-    }, [inView])
+    }, [inView, animationTitle, animationContent])
     
     return ( 
         <>
