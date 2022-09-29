@@ -12,14 +12,14 @@ const Tablas = styled.div`
     -ms-user-select: none;
     user-select: none; 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     overflow: hidden;
 }
 
     .tabs {
         position: relative;
         width: 770px;
-        height: 600px;
+        height: 500px;
         padding: 30px 20px;
         overflow: hidden;
         .tab-header{
@@ -27,6 +27,9 @@ const Tablas = styled.div`
             width: 125px;
             height: 100%;
             border-right: 1px solid #bfa6ff;
+            @media (max-width: 640px) {
+                width: 100px;
+            }
         }
         .tab-header > div {
             margin-bottom: 15px;
@@ -38,6 +41,10 @@ const Tablas = styled.div`
             padding-left: 0px;
             display: grid;
             align-items: center;
+            @media (max-width: 640px) {
+                font-size: 14px;
+                font-weight: 600;
+            }
         }
         .tab-header > div:hover,
         .tab-header > div.active {
@@ -72,6 +79,10 @@ const Tablas = styled.div`
             top: 30px;
             border-radius: 10px 10px 10px 10px;
             transition: all 500ms ease-in-out;
+            @media (max-width: 640px) {
+                left: 117.5px;
+
+            }
         }
     }
 `
@@ -134,11 +145,11 @@ const Experienc = () => {
         <>
             <div ref={ ref } className='w-full flex justify-center bg-Background text-white'
             >
-                <div className='max-w-240 grid content-center my-32 sm:mx-20 '>
+                <div className='max-w-240 grid content-center mt-28 sm:my-32 sm:mx-20'>
                     <motion.h1
                         animate={ animationTitle }
-                        className='opacity-0 text-center text-4xl font-open-sans font-bold 
-                                    mb-5 mt-40 sm:mt-0'
+                        className='opacity-0 text-center text-2xl sm:text-4xl font-open-sans font-bold 
+                                    mb-5 '
                     >
                         Where I’ve&nbsp;
                         <font
@@ -174,7 +185,7 @@ const Experienc = () => {
                                     onClick={() => changeTab(4)}
                                     className={tab === 4 ? 'active' : ''}
                                 >
-                                    SQDesarrollo & Holcim Mexico
+                                    SQDesarrollo & Holcim
                                 </div>
                                 <div
                                     onClick={() => changeTab(5)}
@@ -241,7 +252,7 @@ const Experienc = () => {
                                 <div className={tab === 4 ? 'active': ''}>
                                     <TabContent
                                         url={'https://sqdesarrollo.com.mx/'}
-                                        title={'SQDesarrollo & Holcim Mexico'}
+                                        title={'SQDesarrollo & Holcim'}
                                         work={'Design and programming'}
                                         date={'Jan 2019 - Dec 2019'}
                                         contentOne={

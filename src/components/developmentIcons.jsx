@@ -123,7 +123,7 @@ const DevelopmentIcons = () => {
                     rel="noopener noreferrer"
                 >
                     <DiReact 
-                        className='h-20 w-20 text-icon-color transition 
+                        className='h-14 w-14 sm:h-20 sm:w-20 text-icon-color transition 
                                     ease-in-out hover:scale-125 duration-200' 
                     />
                 </motion.a>
@@ -135,7 +135,7 @@ const DevelopmentIcons = () => {
                     rel="noopener noreferrer"
                 >
                     <DiAngularSimple 
-                        className='h-20 w-20 text-icon-color transition 
+                        className='h-14 w-14 sm:h-20 sm:w-20 text-icon-color transition 
                                     ease-in-out hover:scale-125 duration-200' 
                     />
                 </motion.a>
@@ -147,7 +147,7 @@ const DevelopmentIcons = () => {
                     rel="noopener noreferrer"
                 >
                     <DiJavascript1 
-                        className='h-20 w-20 text-icon-color transition 
+                        className='h-14 w-14 sm:h-20 sm:w-20 text-icon-color transition 
                                     ease-in-out hover:scale-125 duration-200' 
                     />
                 </motion.a>
@@ -159,7 +159,7 @@ const DevelopmentIcons = () => {
                     rel="noopener noreferrer"
                 >
                     <SiTailwindcss 
-                        className='h-20 w-20 text-icon-color transition 
+                        className='h-14 w-14 sm:h-20 sm:w-20 text-icon-color transition 
                                     ease-in-out hover:scale-125 duration-200º' 
                     />
                 </motion.a>
@@ -171,7 +171,7 @@ const DevelopmentIcons = () => {
                     rel="noopener noreferrer"
                 >
                     <DiNodejs 
-                        className='h-20 w-20 text-icon-color transition 
+                        className='h-14 w-14 sm:h-20 sm:w-20 text-icon-color transition 
                                     ease-in-out hover:scale-125 duration-200' 
                     />
                 </motion.a>
@@ -183,7 +183,7 @@ const DevelopmentIcons = () => {
                     rel="noopener noreferrer"
                 >
                     <SiFirebase 
-                        className='h-20 w-20 text-icon-color transition 
+                        className='h-14 w-14 sm:h-20 sm:w-20 text-icon-color transition 
                                     ease-in-out hover:scale-125 duration-200' 
                     />
                 </motion.a>
@@ -195,7 +195,7 @@ const DevelopmentIcons = () => {
                     rel="noopener noreferrer"
                 >
                     <SiSolidity 
-                        className='h-20 w-20 text-icon-color transition 
+                        className='h-14 w-14 sm:h-20 sm:w-20 text-icon-color transition 
                                     ease-in-out hover:scale-125 duration-200º' 
                     />
                 </motion.a>
@@ -207,7 +207,7 @@ const DevelopmentIcons = () => {
                     rel="noopener noreferrer"
                 >
                     <SiRust 
-                        className='h-20 w-20 text-icon-color transition 
+                        className='h-14 w-14 sm:h-20 sm:w-20 text-icon-color transition 
                                     ease-in-out hover:scale-125 duration-200º' 
                     />
                 </motion.a>

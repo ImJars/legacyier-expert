@@ -22,7 +22,7 @@ const NavContainer = styled.div`
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    transition: all .5s ease;
+    transition: all .4s ease-in-out;
     a{
       color: white;
       font-size: 2rem;
@@ -60,7 +60,7 @@ const BgDiv = styled.div`
   left: -1000px;
   width: 100%;
   height: 100%;
-  transition: all .6s ease ;
+  transition: all .4s ease-in-out ;
   
   &.active{
     border-radius: 0 0 80% 0;
@@ -86,11 +86,11 @@ const Header = () => {
                     <HamburguerMenu clicked={clicked} handleClick={handleClick}/>
                 </div>
                 <div className={`links z-20 ${clicked ? 'active' : ''}`}>
-                        <a className='font-roboto font-bold' onClick={handleClick} href="#Home">Home</a>
-                        <a className='font-roboto font-bold' onClick={handleClick} href="#About">About</a>
-                        <a className='font-roboto font-bold' onClick={handleClick} href="#Experience">Experience</a>
-                        <a className='font-roboto font-bold' onClick={handleClick} href="#Work">Work</a>
-                        <a className='font-roboto font-bold' onClick={handleClick} href="#Contact">Contact</a>
+                        <a className='font-open-sans font-bold' onClick={handleClick} href="#Home">Home</a>
+                        <a className='font-open-sans font-bold' onClick={handleClick} href="#About">About</a>
+                        <a className='font-open-sans font-bold' onClick={handleClick} href="#Experience">Experience</a>
+                        <a className='font-open-sans font-bold' onClick={handleClick} href="#Work">Work</a>
+                        <a className='font-open-sans font-bold' onClick={handleClick} href="#Contact">Contact</a>
                 </div>
                 <BgDiv className={`initial z-10 ${ clicked ? 'active' : ''}`}></BgDiv>
             </NavContainer>

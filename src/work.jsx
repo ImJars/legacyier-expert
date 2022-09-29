@@ -4,8 +4,8 @@ import Title from './components/title';
 const Work = () => {
     return ( 
         <>
-            <div className='bg-Background w-full'>
-                <div className='min-h-750 flex justify-center mx-20'>
+            <div className='w-full flex justify-center bg-Background text-white'>
+                <div className='grid content-center mt-28 sm:my-32 sm:mx-20'>
                     <Title 
                         text={'Some Things I’ve'}
                         gradientText={'Built'}

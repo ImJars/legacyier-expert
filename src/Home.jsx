@@ -68,27 +68,27 @@ const Home = () => {
                                 animate={animation}
                             >
                                 <font
-                                    className='text-Color-Text-H3 font-open-sans font-semibold text-base
-                                                tracking-wider mb-4'
+                                    className='text-Color-Text-H3 font-open-sans font-semibold text-xs sm:text-base
+                                                tracking-wider mb-1 sm:mb-4'
                                 >
                                     Hello!, my name is&nbsp; 
                                 </font>
                                 <font
                                     className='text-transparent bg-clip-text bg-gradient-to-r
                                         from-Color-Text-H3 via-Color-Text-H1 to-Color-Text-H2
-                                        font-open-sans font-bold text-5xl sm:text-7xl pb-4'
+                                        font-open-sans font-bold text-5xl sm:text-7xl pb-2 sm:pb-4'
                                 >
                                     Angel Ramirez
                                 </font>
 
                             </motion.h1>
                             <motion.h2 className='text-Color-Text-H1 font-open-sans font-semibold text-3xl
-                                                sm:text-5xl opacity-0 pb-4'
+                                                sm:text-5xl opacity-0 sm:pb-4'
                                 animate={animationSubtitle}
                             >
                                 I build things for the web.
                             </motion.h2>
-                            <motion.h3 className='text-white pt-5 font-open-sans opacity-0 max-w-150'
+                            <motion.h3 className='text-white pt-5 font-open-sans opacity-0 max-w-150 text-sm sm:text-base'
                                 animate={animationText}
                             >
                                 I'm a software developer specializing in creating exceptional 
