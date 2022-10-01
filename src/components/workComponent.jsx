@@ -7,10 +7,10 @@ const WorkComponent = () => {
     return ( 
         <>
             <div
-                className='max-w-workTarjet min-h-hTarjet flex'
+                className='max-w-workTarjet flex mx-20'
             >
                 <div
-                    className='w-3/4 relative '
+                    className='w-auto lg:w-2/3 relative '
                 >
                     <img
                         className='rounded-xl grayscale-90 hover:filter 
@@ -21,8 +21,9 @@ const WorkComponent = () => {
                     />
                 </div>
                 <div
-                    className='w-1/4 grid content-center absolute transform
-                    translate-x-full translate-y-1/3'
+                    className='w-auto lg:w-1/3 grid content-center absolute transform
+                     xl:translate-y-1/4 xl:translate-x-[65%] lg:translate-x-[100%] lg:translate-y-[20%] 
+                     translate-x-0 translate-y-0'
                 >
                     <h1
                         className='text-xs text-Color-Text-H3
