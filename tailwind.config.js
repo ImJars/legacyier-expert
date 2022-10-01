@@ -22,14 +22,17 @@ module.exports = {
         'Color-Text-H4': '#E6E7E9',
         'Color-Text-H5': '#777A94',
         'icon-color': '#A4A4A4',
+        'bg-img': '#01133c',
       },
       minHeight: {
         750: '50rem',
+        hTarjet: '330px'
       },
       maxWidth: {
         150: '500px',
         240: '60rem',
         200: '80rem', //960px
+        workTarjet: '885px'
       },
       translate: {
         '1/5': '44%',
@@ -44,6 +47,16 @@ module.exports = {
       boxShadow: {
         'xl': '0px 0px 20px 10px #011326',
       },
+      hueRotate: {
+        img: '417deg',
+      },
+      grayscale: {
+        50: '50%',
+        60: '60%',
+        70: '70%',
+        80: '80%',
+        90: '90%',
+      }
     },
   },
   plugins: [],
