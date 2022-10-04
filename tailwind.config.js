@@ -32,7 +32,7 @@ module.exports = {
         150: '500px',
         240: '60rem',
         200: '80rem', //960px
-        workTarjet: '900px'
+        workTarjet: '990px'
       },
       translate: {
         '1/5': '44%',
