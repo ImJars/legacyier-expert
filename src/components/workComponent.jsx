@@ -10,18 +10,18 @@ const WorkComponent = () => {
                 className='max-w-workTarjet relative mx-5 sm:mx-20'
             >
                 <div
-                    className='static'
+                    className='static sm:w-2/3'
                 >
                     <img
                         className='rounded-xl grayscale-50 sm:grayscale-90 hover:filter 
                                 hover:grayscale-0 transition duration-500 
-                                ease-in-out blur-sm opacity-70' 
+                                ease-in-out blur-sm hover:blur-none opacity-70' 
                         src={ LegacyierPic } 
                         alt="" 
                     />
                     <div
-                        className='absolute bottom-0 top-0 
-                                grid content-center ml-6 mr-2'
+                        className='absolute bottom-0 top-0 md:left-1/4 
+                                grid content-center ml-6 mr-2 md:mx-0'
                     >
                         <h1
                             className='text-xs text-Color-Text-H3
@@ -33,7 +33,7 @@ const WorkComponent = () => {
                             className='flex sm:justify-end text-white'
                         >
                             <a
-                                className='text-xl font-bold hover:text-Color-Text-H3
+                                className='text-xl md:text-2xl font-bold hover:text-Color-Text-H3
                                         transition duration-500 ease-in-out'
                                 href='https://github.com/ImJars/legacyier-expert'
                                 target='_blank'
@@ -43,9 +43,8 @@ const WorkComponent = () => {
                             </a>
                         </h2>
                         <div
-                            className='sm:bg-bg-img font-open-sans sm:text-end
-                                    sm:px-4 sm:py-4 rounded-xl text-Color-Text-H4 text-sm
-                                    my-4'
+                            className='font-semibold font-open-sans sm:text-end my-2 md:my-4
+                                     rounded-xl text-Color-Text-H4 text-sm'
                         >
                             <p>
                                 Lorem ipsum dolor sit amet consectetur 
