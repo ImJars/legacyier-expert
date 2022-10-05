@@ -34,7 +34,7 @@ const Work = () => {
     
     return ( 
         <>
-            <div ref={ ref } className='bg-Background text-white w-full h-screen'>
+            <div ref={ ref } className='bg-Background text-white w-full pb-20 sm:pb-32'>
                 <motion.div className='opacity-0' animate={ animation }>
                     <h1 
                         className='bg-Background text-center text-2xl sm:text-4xl font-open-sans 
