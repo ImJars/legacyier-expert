@@ -1,19 +1,49 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import LegacyierPic from '../images/legacyier-react.png';
 import { AiOutlineLink } from 'react-icons/ai';
 import { FiGithub } from 'react-icons/fi';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const WorkComponent = () => {
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+        triggerOnce: true
+    })
+
+    const animation = useAnimation();
+
+    useEffect(() => {
+        if (inView) {
+            animation.start({
+                opacity: 1,
+                y: 0,
+                transition: {
+                    type: 'spring', duration: 2, delay: .02
+                }
+            })
+        }
+        if (!inView) {
+            animation.start({
+                opacity: 0,
+                y: '5vw',
+            })
+        }
+        
+    }, [inView, animation])
+    
     return ( 
         <>
             <div
+                ref={ ref }
                 className='max-w-workTarjet relative mx-5 sm:mx-20'
             >
-                <div
-                    className='static sm:w-2/3'
+                <motion.div
+                    animate={ animation }
+                    className='opacity-0 static'
                 >
                     <img
-                        className='rounded-xl grayscale-50 sm:grayscale-90 hover:filter 
+                        className='sm:w-2/3 rounded-xl grayscale-50 sm:grayscale-90 hover:filter 
                                 hover:grayscale-0 transition duration-500 
                                 ease-in-out blur-sm hover:blur-none opacity-70' 
                         src={ LegacyierPic } 
@@ -98,7 +128,7 @@ const WorkComponent = () => {
                             </a>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </>
      );

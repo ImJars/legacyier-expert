@@ -1,15 +1,45 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import DesignPage from '../images/design-page.jpeg';
 import { AiOutlineLink } from 'react-icons/ai';
 import { FiGithub } from 'react-icons/fi';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const WorkComponentTwo = () => {
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+        triggerOnce: true
+    })
+    const animation = useAnimation();
+
+    useEffect(() => {
+        if (inView) {
+            animation.start({
+                opacity: 1,
+                y: 0,
+                transition: {
+                    type: 'spring', duration: 2, delay: .02
+                }
+            })
+        }
+        if (!inView) {
+            animation.start({
+                opacity: 0,
+                y: '5vw',
+            })
+        }
+    }, [inView, animation])
+    
     return ( 
         <>
             <div
+                ref={ ref }
                 className='max-w-workTarjet relative mx-5 sm:mx-20'
             >
-                <div className='static flex justify-end'>
+                <motion.div
+                    animate={ animation } 
+                    className='opacity-0 static flex justify-end'
+                >
                     <div 
                         className='absolute bottom-0 top-0 md:right-1/4 
                                 grid content-center ml-6 mr-2 md:mx-0 z-10'
@@ -98,7 +128,7 @@ const WorkComponentTwo = () => {
                         src={ DesignPage } 
                         alt="" 
                     />
-                </div>
+                </motion.div>
             </div>
         </>
      );
