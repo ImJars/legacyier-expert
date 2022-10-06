@@ -23,6 +23,8 @@ module.exports = {
         'Color-Text-H5': '#777A94',
         'icon-color': '#A4A4A4',
         'bg-img': '#01133c',
+        'text-mini': '#A8B2D1',
+        'bg-example': '#112240',
       },
       minHeight: {
         750: '50rem',
