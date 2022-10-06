@@ -8,6 +8,7 @@ import About from './about';
 import Experience from './Experience';
 import Work from './work';
 import OtherWorks from './otherWorks';
+import Contact from './contact';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +20,7 @@ root.render(
     <Experience />
     <Work />
     <OtherWorks />
+    <Contact />
   </React.StrictMode>
 );
 
