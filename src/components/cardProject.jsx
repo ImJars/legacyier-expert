@@ -5,9 +5,9 @@ import { FiGithub, FiExternalLink } from 'react-icons/fi';
 const CardProject = () => {
     return ( 
         <>
-            <a
-                href='#'
-                className='px-6 py-10 m-2 bg-bg-example rounded-lg 
+            <div
+                className='px-6 py-10 m-3
+                 md:m-4 lg:m-2 bg-bg-example rounded-lg cursor-pointer
                         hover:transform hover:-translate-y-4 transition duration-500 ease-in-out'
             >
                 <div className='flex justify-between mb-5'>
@@ -15,14 +15,14 @@ const CardProject = () => {
                         className='text-4xl text-Color-Text-H1'
                     />
                     <div className='grid grid-cols-2 content-center space-x-2'>
-                        <a href="#">
+                        <a href="https://github.com/ImJars/legacyier-expert">
                             <FiGithub 
                                 className='text-xl text-icon-color
                                             hover:text-Color-Text-H1
                                             transition duration-500 ease-in-out'
                             />
                         </a>
-                        <a href="#">
+                        <a href="https://github.com/ImJars/legacyier-expert">
                             <FiExternalLink 
                                 className='text-xl text-icon-color
                                         hover:text-Color-Text-H1 transition 
@@ -60,7 +60,7 @@ const CardProject = () => {
                         </p>
                     </div>
                 </div>
-            </a>
+            </div>
         </>
      );
 }

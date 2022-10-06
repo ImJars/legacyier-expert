@@ -7,7 +7,7 @@ const OtherWorks = () => {
             <div
                 className='bg-Background text-white w-full h-screen flex justify-center'
             >
-                <div className='max-w-240 flex flex-col'>
+                <div className='max-w-240 flex flex-col mx-5 sm:mx-20'>
                     <div className='mb-14 sm:mb-36'>
                         <h1
                             className='text-center text-2xl sm:text-4xl font-open-sans 
@@ -24,7 +24,9 @@ const OtherWorks = () => {
                         </h1>
                     </div>
                     <div>
-                        <div className='grid grid-cols-3'>
+                        <div 
+                            className='grid md:grid-cols-2 lg:grid-cols-3'
+                        >
                             <CardProject />
                             <CardProject />
                             <CardProject />
