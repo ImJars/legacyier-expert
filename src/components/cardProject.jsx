@@ -2,11 +2,20 @@ import React from 'react';
 import { AiFillFolderOpen} from 'react-icons/ai';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 
-const CardProject = () => {
+const CardProject = ({ 
+    classNameGit, 
+    classNameLink, 
+    title,
+    content,
+    technology,
+    technologyTwo,
+    technologyThree,
+    technologyFour 
+}) => {
     return ( 
         <>
             <div
-                className='px-6 py-10 m-3
+                className='px-6 py-3 md:py-5 lg:py-10 m-3
                  md:m-4 lg:m-2 bg-bg-example rounded-lg cursor-pointer
                         hover:transform hover:-translate-y-4 transition duration-500 ease-in-out'
             >
@@ -14,15 +23,21 @@ const CardProject = () => {
                     <AiFillFolderOpen 
                         className='text-4xl text-Color-Text-H1'
                     />
-                    <div className='grid grid-cols-2 content-center space-x-2'>
-                        <a href="https://github.com/ImJars/legacyier-expert">
+                    <div className='flex items-center space-x-2'>
+                        <a 
+                            href="https://github.com/ImJars/legacyier-expert"
+                            className={ classNameGit }
+                        >
                             <FiGithub 
-                                className='text-xl text-icon-color
-                                            hover:text-Color-Text-H1
-                                            transition duration-500 ease-in-out'
+                                className='text-xl text-icon-color 
+                                        hover:text-Color-Text-H1 
+                                        transition duration-500 ease-in-out'
                             />
                         </a>
-                        <a href="https://github.com/ImJars/legacyier-expert">
+                        <a 
+                            href="https://github.com/ImJars/legacyier-expert"
+                            className={ classNameLink }
+                        >
                             <FiExternalLink 
                                 className='text-xl text-icon-color
                                         hover:text-Color-Text-H1 transition 
@@ -36,27 +51,28 @@ const CardProject = () => {
                         className='font-open-sans font-bold text-xl 
                                 text-Color-Text-H4 mb-2'
                     >
-                        Title Project
+                        { title }
                     </h1>
                     <p
                         className='font-open-sans text-sm text-text-mini
                                 mb-5'
                     >
-                        Lorem ipsum dolor sit amet consectetur 
-                        adipisicing elit. Nisi animi, cum velit ad 
-                        quidem omnis consequuntur dolore
+                        { content }
                     </p>
                     <div
                         className='font-open-sans flex space-x-2 text-xs text-icon-color'
                     >
                         <p>
-                            SQL Server
+                            { technology }
                         </p>
                         <p>
-                            .NET
+                            { technologyTwo }
                         </p>
                         <p>
-                            Excel
+                            { technologyThree }
+                        </p>
+                        <p>
+                            { technologyFour }
                         </p>
                     </div>
                 </div>

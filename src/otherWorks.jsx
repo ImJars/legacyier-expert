@@ -5,7 +5,7 @@ const OtherWorks = () => {
     return ( 
         <>
             <div
-                className='bg-Background text-white w-full h-screen flex justify-center'
+                className='bg-Background text-white w-full h-full flex justify-center pb-20'
             >
                 <div className='max-w-240 flex flex-col mx-5 sm:mx-20'>
                     <div className='mb-14 sm:mb-36'>
@@ -27,9 +27,36 @@ const OtherWorks = () => {
                         <div 
                             className='grid md:grid-cols-2 lg:grid-cols-3'
                         >
-                            <CardProject />
-                            <CardProject />
-                            <CardProject />
+                            <CardProject 
+                                classNameGit={ 'hidden' }
+                                title={ 'Project CMO' }
+                                content={
+                                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum optio mollitia nemo dolorem. Exercitationem cupiditate reprehenderit sunt amet maxime iure pariatur'
+                                }
+                                technology={ 'React' }
+                                technologyTwo={ 'Next.js' }
+                                technologyThree={ 'TailwindCSS' }
+                                technologyFour={ 'Firebase' }
+                            />
+                            <CardProject 
+                                title={ 'Project Holcim' }
+                                content={
+                                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum optio mollitia nemo dolorem. Exercitationem cupiditate reprehenderit sunt amet maxime iure pariatur'
+                                }
+                                technology={ 'SQL Server' }
+                                technologyTwo={ '.NET' }
+                                technologyThree={ 'Excel' }
+                            />
+                            <CardProject 
+                                classNameLink={ 'hidden' }
+                                title={ 'Project Bonafont' }
+                                content={
+                                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum optio mollitia nemo dolorem. Exercitationem cupiditate reprehenderit sunt amet maxime iure pariatur'
+                                }
+                                technology={ 'Visual Basic' }
+                                technologyTwo={ 'MySQL' }
+                                technologyThree={ 'Excel' }
+                            />
                         </div>
                     </div>
                 </div>
