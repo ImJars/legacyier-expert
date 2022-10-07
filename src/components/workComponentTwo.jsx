@@ -41,7 +41,7 @@ const WorkComponentTwo = () => {
                     className='opacity-0 static flex justify-end'
                 >
                     <div 
-                        className='absolute bottom-0 top-0 md:right-1/4 
+                        className='absolute bottom-0 top-0 left-0 right-0 md:right-1/4 
                                 grid content-center ml-6 mr-2 md:mx-0 z-10'
                     >
                         <h1
@@ -65,7 +65,7 @@ const WorkComponentTwo = () => {
                         </h2>
                         <div
                             className='font-semibold font-open-sans my-2 md:my-4
-                            rounded-xl text-Color-Text-H4 text-xs sm:text-sm'
+                            rounded-xl text-Color-Text-H4 text-xs sm:text-sm mr-4'
                         >
                             <p>
                                 Lorem ipsum dolor sit amet consectetur, 
@@ -77,7 +77,7 @@ const WorkComponentTwo = () => {
                         </div>
                         <div
                             className='font-open-sans flex text-xs 
-                            sm:space-x-4 space-x-3 text-Color-Text-H5 font-semibold'
+                            sm:space-x-4 space-x-2 text-Color-Text-H5 font-semibold'
                         >
                             <p>
                                 Styled Components
