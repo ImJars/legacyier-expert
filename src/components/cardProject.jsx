@@ -1,6 +1,7 @@
 import React from 'react';
 import { AiFillFolderOpen} from 'react-icons/ai';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import { motion } from 'framer-motion';
 
 const CardProject = ({ 
     classNameGit, 
@@ -10,10 +11,12 @@ const CardProject = ({
     technology,
     technologyTwo,
     technologyThree,
-    technologyFour 
+    technologyFour,
+    animation 
 }) => {
     return ( 
         <>
+        <motion.div animate= { animation }>
             <div
                 className='px-6 py-3 md:py-5 lg:py-10 m-3
                  md:m-4 lg:m-2 bg-bg-example rounded-lg cursor-pointer
@@ -77,6 +80,7 @@ const CardProject = ({
                     </div>
                 </div>
             </div>
+        </motion.div>
         </>
      );
 }
