@@ -34,7 +34,7 @@ const WorkComponentTwo = () => {
         <>
             <div
                 ref={ ref }
-                className='max-w-workTarjet relative mx-5 sm:mx-20'
+                className='max-w-250 relative mx-5 sm:mx-20 sm:pb-8'
             >
                 <motion.div
                     animate={ animation } 
@@ -65,7 +65,8 @@ const WorkComponentTwo = () => {
                         </h2>
                         <div
                             className='font-semibold font-open-sans my-2 md:my-4
-                            rounded-xl text-Color-Text-H4 text-xs sm:text-sm mr-4'
+                            rounded-xl text-text-mini text-xs sm:text-sm mr-4
+                            sm:bg-bg-example sm:py-5 sm:px-4'
                         >
                             <p>
                                 Lorem ipsum dolor sit amet consectetur, 
