@@ -84,8 +84,8 @@ const OtherWorks = () => {
                 ref={ ref }
                 className='bg-Background text-white w-full h-full flex justify-center pb-20'
             >
-                <div className='max-w-240 flex flex-col mx-5 sm:mx-20'>
-                    <div className='mb-14 sm:mb-36'>
+                <div className='max-w-240 flex flex-col mx-5 sm:mx-20 my-10 py-20'>
+                    <div className='mb-20'>
                         <motion.h1
                             animate= { animation }
                             className='text-center text-2xl sm:text-4xl font-open-sans 

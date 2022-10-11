@@ -19,7 +19,7 @@ const Work = () => {
                 opacity: 1,
                 y: 0,
                 transition: {
-                    type: 'spring', duration: 2, delay: .02
+                    type: 'spring', duration: 3, delay: .01
                 }
             })
         }
@@ -34,11 +34,11 @@ const Work = () => {
     
     return ( 
         <>
-            <div ref={ ref } className='bg-Background text-white w-full pb-20 sm:pb-32'>
+            <div ref={ ref } className='bg-Background text-white w-full py-32'>
                 <motion.div className='opacity-0' animate={ animation }>
                     <h1 
-                        className='bg-Background text-center text-2xl sm:text-4xl font-open-sans 
-                            font-bold mb-10 text-white'
+                        className=' bg-Background text-center text-2xl sm:text-4xl font-open-sans 
+                            font-bold mb-14 text-white'
                     >
                         Some Things I’ve&nbsp; 
                     <font className="text-transparent bg-clip-text bg-gradient-to-r
