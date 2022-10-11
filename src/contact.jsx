@@ -1,11 +1,81 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FiGitBranch } from 'react-icons/fi';
 import { AiOutlineStar } from 'react-icons/ai';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const Contact = () => {
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+        triggerOnce: true
+    })
+
+    const animate = useAnimation();
+    const animateTwo = useAnimation();
+    const animateThree = useAnimation();
+    const animateFour = useAnimation();
+
+    useEffect(() => {
+        if (inView) {
+            animate.start({
+                opacity: 1,
+            transition: {
+                type: 'spring', duration: 2, delay: .1
+            }
+            })
+        }
+        if (inView) {
+            animateTwo.start({
+                opacity: 1,
+            transition: {
+                type: 'spring', duration: 2, delay: .3
+            }
+            })
+        }
+        if (inView) {
+            animateThree.start({
+                opacity: 1,
+            transition: {
+                type: 'spring', duration: 2, delay: .5
+            }
+            })
+        }
+        if (inView) {
+            animateFour.start({
+                opacity: 1,
+            transition: {
+                type: 'spring', duration: 2, delay: .6
+            }
+            })
+        }
+        if (!inView) {
+            animate.start({
+                opacity: 0,
+            })
+        }
+        if (!inView) {
+            animateTwo.start({
+                opacity: 0,
+            })
+        }
+        if (!inView) {
+            animateThree.start({
+                opacity: 0,
+            })
+        }
+        if (!inView) {
+            animateFour.start({
+                opacity: 0,
+            })
+        }
+        
+    }, [inView, animate, animateTwo, animateThree, animateFour])
+    
+
     return ( 
         <>
             <div
+                ref={ ref }
                 className="w-full min-h-750 bg-Background 
                         text-white flex flex-col justify-center items-center"
             >
@@ -15,19 +85,22 @@ const Contact = () => {
                     <div
                     className='text-center'
                     >
-                        <h2
+                        <motion.h2
+                            animate = { animate }
                             className='font-open-sans text-sm tracking-widest
                                     text-Color-Text-H1 mb-2'
                         >
                             What’s Next?
-                        </h2>
-                        <h1
+                        </motion.h2>
+                        <motion.h1
+                            animate = { animateTwo }
                             className='text-Color-Text-H4 font-open-sans
                                     font-bold text-2xl sm:text-4xl'
                         >
                             Get In Touch
-                        </h1>
-                        <p
+                        </motion.h1>
+                        <motion.p
+                            animate = { animateThree }
                             className='text-text-mini font-open-sans
                                     mb-14 mt-6 max-w-lg'
                         >
@@ -35,8 +108,9 @@ const Contact = () => {
                         further develop my skills. My inbox is always open. 
                         Whether you have a question or just want to say hi, 
                         I’ll try my best to get back to you!
-                        </p>
-                        <a 
+                        </motion.p>
+                        <motion.a
+                            animate = { animateFour } 
                             href="mailto:hi.legacyier@gmail.com"
                             
                         >
@@ -48,7 +122,7 @@ const Contact = () => {
                             >
                                 Say Hello!
                             </button>
-                        </a>
+                        </motion.a>
                     </div>
                 </div>
             </div>
