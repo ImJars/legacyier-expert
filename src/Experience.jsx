@@ -145,7 +145,7 @@ const Experienc = () => {
         <>
             <div ref={ ref } className='w-full flex justify-center bg-Background text-white'
             >
-                <div className='max-w-240 grid content-center sm:mx-20 my-10 py-20'>
+                <div className='max-w-250 grid content-center sm:mx-20 my-10 py-20'>
                     <motion.h1
                         animate={ animationTitle }
                         className='opacity-0 text-center text-2xl sm:text-4xl font-open-sans font-bold 

@@ -33,6 +33,7 @@ module.exports = {
       maxWidth: {
         150: '500px',
         240: '60rem',
+        250: '68rem',
         200: '80rem', //960px
         workTarjet: '990px'
       },
