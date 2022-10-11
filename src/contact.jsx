@@ -1,5 +1,6 @@
 import React from 'react'
 import { FiGitBranch } from 'react-icons/fi';
+import { AiOutlineStar } from 'react-icons/ai';
 
 const Contact = () => {
     return ( 
@@ -68,6 +69,9 @@ const Contact = () => {
                         <h2
                             className='flex justify-center items-center mt-2 space-x-1'
                         >
+                            <AiOutlineStar 
+                                className='w-3 h-3'
+                            />
                             <FiGitBranch 
                                 className='w-3 h-3'
                             />
