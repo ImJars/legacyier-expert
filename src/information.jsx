@@ -51,10 +51,10 @@ const Information = () => {
             <motion.div ref={ref}>
                 <motion.div
                     animate={animation}
-                    className='opacity-0 delay-0'
+                    className='opacity-0 delay-0 '
                 >
                     <Section
-                        className="fixed flex justify-end transform left-auto 
+                        className="fixed flex justify-end transform left-auto z-50
                                 rotate-90 -translate-y-3 translate-x-14 origin-left invisible sm:visible"
                     >
                         <div className='grid grid-cols-5 gap-x-6'>

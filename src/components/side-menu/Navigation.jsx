@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { MenuItem } from '../side-menu/MenuItem';
 
-const itemsIds = [0, 1, 2, 3];
+const itemsIds = [0, 1, 2, 3, 4];
 const variants = {
     open: {
         transition: { staggerChildren: 0.07, delayChildren: 0.2 }

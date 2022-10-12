@@ -16,7 +16,7 @@ const sidebar = {
     closed: {
         clipPath: "circle(30px at 40px 40px)",
         transition: {
-            delay: 0.1,
+            delay: 0.15,
             type: "spring",
             stiffness: 400,
             damping: 40
@@ -35,7 +35,7 @@ const Example = () => {
     return ( 
         <>
             <motion.nav
-                className={ isOpen ? 'open' : '' }
+                className={ 'block sm:hidden' }
                 initial={false}
                 animate={isOpen ? "open" : "closed"}
                 custom={height}
