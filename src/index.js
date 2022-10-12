@@ -9,6 +9,7 @@ import Experience from './Experience';
 import Work from './work';
 import OtherWorks from './otherWorks';
 import Contact from './contact';
+import Example from './components/side-menu/Example';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,6 +22,7 @@ root.render(
     <Work />
     <OtherWorks />
     <Contact />
+    <Example />
   </React.StrictMode>
 );
 
