@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion';
+import { MdAccountCircle } from 'react-icons/md';
 
 const variants = {
     open: {
@@ -20,10 +21,15 @@ const variants = {
     }    
 };
 
-const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"]
+const information = [
+    { key: 0, icon: <MdAccountCircle />, text: 'Home', link: '#Home' },
+    { key: 1, icon: <MdAccountCircle />, text: 'About', link: '#About' },
+    { key: 2, icon: <MdAccountCircle />, text: 'Experience', link: 'www.google.com' },
+    { key: 3, icon: <MdAccountCircle />, text: 'Work', link: 'www.google.com' },
+    { key: 4, icon: <MdAccountCircle />, text: 'Contact', link: 'www.google.com' },
+]
 
-export const MenuItem = ({ i }) => {
-    const style = { border: `2px solid ${colors[i]}` } 
+export const MenuItem = ({ i, handleClick }) => {
     return ( 
         <>
             <motion.li
@@ -31,8 +37,16 @@ export const MenuItem = ({ i }) => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
             >
-                <div className="icon-placeholder" style={style} />
-                <div className="text-placeholder" style={style} />
+                {/* <div key={ information[i].key } className="icon-placeholder" style={style} >
+                    {information[i].icon}
+                </div> */}
+                <a 
+                    onClick={ handleClick }
+                    href={ information[i].link }
+                    className="text-placeholder flex justify-center"
+                >
+                    {information[i].text}   
+                </a>
             </motion.li>
         </>
      );

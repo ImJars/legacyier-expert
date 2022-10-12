@@ -16,7 +16,7 @@ const sidebar = {
     closed: {
         clipPath: "circle(30px at 40px 40px)",
         transition: {
-            delay: 0.5,
+            delay: 0.1,
             type: "spring",
             stiffness: 400,
             damping: 40
@@ -29,6 +29,9 @@ const Example = () => {
     const containerRef = useRef(null);
     const { height } = useDimensions(containerRef);
 
+    const handleClick = () => {
+        toggleOpen();
+    }
     return ( 
         <>
             <motion.nav
@@ -42,7 +45,7 @@ const Example = () => {
                     className={isOpen ? 'background open' : 'background closed'}
                     variants={sidebar}
                 />
-                <Navigation />
+                <Navigation handleClick={ e => handleClick() }/>
                 <MenuToggle toggle={() => toggleOpen()} />
             </motion.nav>
         
