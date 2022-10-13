@@ -41,7 +41,7 @@ html {
         display: flex;
       }
       .bg-blur{
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(5px);
         position: absolute;
         transition: all 0.5s ease-in-out;
       }
@@ -83,7 +83,7 @@ html {
       ul {
         padding: 25px;
         position: absolute;
-        top: 25%;
+        top: 15%;
         left: 8%;
         width: 230px;
       }

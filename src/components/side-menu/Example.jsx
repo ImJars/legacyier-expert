@@ -38,7 +38,7 @@ const Example = () => {
                 className={ 
                     isOpen ? 
                         'block sm:hidden bg-blur' : 
-                        'block sm:hidden transition duration-500 ease-in-out' 
+                        'block sm:hidden transition duration-1000 ease-in-out' 
                 }
                 initial={false}
                 animate={isOpen ? "open" : "closed"}
