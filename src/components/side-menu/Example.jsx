@@ -35,14 +35,18 @@ const Example = () => {
     return ( 
         <>
             <motion.nav
-                className={ 'block sm:hidden' }
+                className={ 
+                    isOpen ? 
+                        'block sm:hidden bg-blur overflow-hidden' : 
+                        'block sm:hidden transition duration-500 ease-in-out' 
+                }
                 initial={false}
                 animate={isOpen ? "open" : "closed"}
                 custom={height}
                 ref={containerRef}
             >
                 <motion.div
-                    className={isOpen ? 'background open' : 'background closed'}
+                    className={isOpen ? 'background open' : 'background closed '}
                     variants={sidebar}
                 />
                 <Navigation handleClick={ e => handleClick() }/>
