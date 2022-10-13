@@ -21,11 +21,10 @@ const variants = {
 };
 
 const information = [
-    { key: 0, number: '01.', text: 'Home', link: '#Home' },
-    { key: 1, number: '02.', text: 'About', link: '#About' },
-    { key: 2, number: '03.', text: 'Experience', link: '#Experience' },
-    { key: 3, number: '04.', text: 'Work', link: '#Work' },
-    { key: 4, number: '05.', text: 'Contact', link: '#Contact' },
+    { key: 1, number: '01.', text: 'About', link: '#About' },
+    { key: 2, number: '02.', text: 'Experience', link: '#Experience' },
+    { key: 3, number: '03.', text: 'Work', link: '#Work' },
+    { key: 4, number: '04.', text: 'Contact', link: '#Contact' },
 ]
 
 export const MenuItem = ({ i, handleClick }) => {
@@ -50,6 +49,7 @@ export const MenuItem = ({ i, handleClick }) => {
                 >
                     {information[i].text}   
                 </a>
+
             </motion.li>
         </>
      );

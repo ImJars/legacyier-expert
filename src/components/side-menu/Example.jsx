@@ -37,7 +37,7 @@ const Example = () => {
             <motion.nav
                 className={ 
                     isOpen ? 
-                        'block sm:hidden bg-blur overflow-hidden' : 
+                        'block sm:hidden bg-blur' : 
                         'block sm:hidden transition duration-500 ease-in-out' 
                 }
                 initial={false}
