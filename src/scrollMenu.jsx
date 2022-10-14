@@ -1,10 +1,13 @@
 import React from 'react'
 import { AiOutlineArrowUp } from 'react-icons/ai'
+import { motion } from 'framer-motion';
 
-const ScrollMenu = () => {
+
+const ScrollMenu = ({ animateScroll }) => {
     return ( 
         <>
-            <div
+            <motion.div
+                animate={ animateScroll }
                 className='fixed bottom-0 right-0 z-50'
             >
                 <div
@@ -19,7 +22,7 @@ const ScrollMenu = () => {
                         className='animate-pulse hover:scale-150'/>
                     </a>
                 </div>
-            </div>
+            </motion.div>
         </>
      );
 }
