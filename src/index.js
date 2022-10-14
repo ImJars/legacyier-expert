@@ -10,12 +10,14 @@ import Work from './work';
 import OtherWorks from './otherWorks';
 import Contact from './contact';
 import Example from './components/side-menu/Example';
+import ScrollMenu from './scrollMenu';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Menu />
     <Information />
+    <ScrollMenu />
     <Home/>
     <About />
     <Experience />
