@@ -1,5 +1,5 @@
 import React from 'react'
-import { AiOutlineArrowUp } from 'react-icons/ai'
+import { FaArrowUp } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 
@@ -8,7 +8,7 @@ const ScrollMenu = ({ animateScroll }) => {
         <>
             <motion.div
                 animate={ animateScroll }
-                className='fixed bottom-0 right-0 z-50'
+                className='opacity-0 fixed bottom-0 right-0 z-50'
             >
                 <div
                     className='mb-2 mr-2 bg-Background rounded-full p-5 
@@ -18,8 +18,10 @@ const ScrollMenu = ({ animateScroll }) => {
                         href="#Home"
                         className='text-xl text-white '
                     >
-                        <AiOutlineArrowUp 
-                        className='animate-pulse hover:scale-150'/>
+                        <FaArrowUp 
+                            className='animate-pulse hover:scale-150
+                                    transition duration-500 ease-in-out'
+                        />
                     </a>
                 </div>
             </motion.div>
