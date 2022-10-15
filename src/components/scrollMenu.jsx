@@ -8,7 +8,8 @@ const ScrollMenu = ({ animateScroll }) => {
         <>
             <motion.div
                 animate={ animateScroll }
-                className='opacity-0 fixed bottom-0 right-0 z-50'
+                className='opacity-0 fixed bottom-0 right-0 z-50
+                        sm:hidden block'
             >
                 <div
                     className='mb-2 mr-2 bg-Background rounded-full p-5 

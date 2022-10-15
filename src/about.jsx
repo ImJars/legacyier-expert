@@ -47,7 +47,7 @@ const About = () => {
     return ( 
         <>
             <div id='About' ref={ref} className='w-full flex justify-center bg-Background text-white'>
-                <div className="max-w-250 grid content-center mx-5 sm:mx-20 my-10 py-20">
+                <div className="max-w-240 grid content-center mx-5 sm:mx-20 my-10 py-20">
                     <motion.h1 
                         animate={ animationTitle }
                         className='opacity-0 text-center text-2xl sm:text-4xl font-open-sans 
@@ -63,7 +63,7 @@ const About = () => {
                     </motion.h1>
                     <motion.div
                         animate={ animationText }
-                        className='opacity-0 font-open-sans text-Color-Text-H4 text-xs sm:text-base'
+                        className='opacity-0 font-open-sans text-Color-Text-H4 text-xs sm:text-sm'
                     >
                         <h1 className='text-center mb-2 sm:mb-5'>
                            <font className="font-extrabold">Hello!</font> My name is <font className="font-extrabold">Ángel</font> and I like technology, I enjoy 

@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Header from './components/headerMenu';
 import Link from './components/LinkHeader';
 import { motion, useAnimation  } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -16,7 +15,6 @@ const Menu = () => {
     const animationExperience = useAnimation();
     const animationWork = useAnimation();
     const animationContact = useAnimation();
-    const animationHamburger = useAnimation();
 
 
     useEffect(() => {
@@ -56,12 +54,6 @@ const Menu = () => {
                     type: 'spring', duration: 1, delay: 1.4
                 }
             });
-            animationHamburger.start({
-                opacity: 1,
-                transition: {
-                    type: 'spring', duration: 2, delay: 1
-                }
-            });
         }
         if (!inView) {
             animationHome.start({
@@ -84,18 +76,13 @@ const Menu = () => {
                 opacity: 0,
                 y: '-5vh',
             });
-            animationHamburger.start({
-                opacity: 0,
-            });
         }
-    },[inView, animationHome, animationAbout, animationExperience, animationWork, animationContact, animationHamburger]);
+    },[inView, animationHome, animationAbout, animationExperience, animationWork, animationContact]);
     return ( 
         <>
             <div ref={ref} className='bg-Background w-full fixed z-10 shadow-xl'>
                 <div className='flex justify-between'>
-                    <motion.div animate={ animationHamburger } className='opacity-0 sm:invisible visible'>
-                        <Header />
-                    </motion.div>
+                    
                     <div
                         className='invisible sm:visible h-20 text-white grid grid-cols-5 
                                 content-center mr-20'
