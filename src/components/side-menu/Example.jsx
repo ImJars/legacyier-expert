@@ -24,7 +24,7 @@ const sidebar = {
     }
 }
 
-const Example = () => {
+const Example = ({ animate }) => {
     const [isOpen, toggleOpen] = useCycle(false, true);
     const containerRef = useRef(null);
     const { height } = useDimensions(containerRef);
@@ -34,25 +34,34 @@ const Example = () => {
     }
     return ( 
         <>
-            <motion.nav
-                className={ 
-                    isOpen ? 
-                        'block sm:hidden bg-blur' : 
-                        'block sm:hidden transition duration-1000 ease-in-out' 
-                }
-                initial={false}
-                animate={isOpen ? "open" : "closed"}
-                custom={height}
-                ref={containerRef}
+            <div
             >
                 <motion.div
-                    className={isOpen ? 'background open' : 'background closed '}
-                    variants={sidebar}
-                />
-                <Navigation handleClick={ e => handleClick() }/>
-                <MenuToggle toggle={() => toggleOpen()} />
-            </motion.nav>
-        
+                    animate={ animate }
+                    className={ 'opacity-0 transition-all  ' }
+                >
+                    <div>
+                        <motion.nav
+                            className={ 
+                                isOpen ? 
+                                    'block sm:hidden bg-blur' : 
+                                    'block sm:hidden transition duration-1000 ease-in-out' 
+                            }
+                            initial={false}
+                            animate={isOpen ? "open" : "closed"}
+                            custom={height}
+                            ref={containerRef}
+                        >
+                            <motion.div
+                                className={isOpen ? 'background open' : 'background closed '}
+                                variants={sidebar}
+                            />
+                            <Navigation handleClick={ e => handleClick() }/>
+                            <MenuToggle toggle={() => toggleOpen()} />
+                        </motion.nav>
+                    </div>
+                </motion.div>
+            </div>
         </>
      );
 }

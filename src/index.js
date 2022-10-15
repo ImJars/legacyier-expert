@@ -4,8 +4,8 @@ import './index.css';
 import Menu from './Menu';
 import Information from './information';
 import Home from './Home';
-import Example from './components/side-menu/Example';
 import LayoutScroll from './layoutScroll';
+import MenuMobile from './components/side-menu/menuMobile';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,8 +14,7 @@ root.render(
     <Information />
     <Home/>
     <LayoutScroll />
-    
-    <Example />
+    <MenuMobile />
   </React.StrictMode>
 );
 
